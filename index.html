@@ -1,125 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Adam Owens</title>
-<style>
-body{font-family:Arial,sans-serif;max-width:1100px;margin:70px auto;padding:0 24px;line-height:1.6;color:#222}
-h1,h2,h3{font-weight:600}
-p{color:#555}
-a{color:#222}
-.hero{text-align:center;margin-bottom:90px}
-.section{margin:90px 0}
-hr{margin:90px 0;border:none;border-top:1px solid #d9d9d9}
-.project{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;margin-bottom:70px;align-items:center}
-.project img{width:100%;max-height:340px;object-fit:cover}
-.skills{font-size:.95rem;color:#555}
-.archive-grid{
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(135px,1fr));
-gap:10px;
-}
-.thumb{
-width:100%;
-aspect-ratio:1;
-object-fit:cover;
-filter:grayscale(100%);
-transition:.25s;
-display:block;
-}
-.thumb:hover{
-filter:grayscale(0%);
-transform:scale(1.02);
-}
-@media(max-width:800px){
-.project{grid-template-columns:1fr}
-}
-</style>
+  <title>Adam Owens</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 1000px;
+      margin: 60px auto;
+      line-height: 1.5;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      color: #444;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .poster {
+      text-align: center;
+    }
+
+    .poster img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border: 1px solid #ddd;
+    }
+
+    .poster-title {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .archive {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .archive img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: 0.2s ease;
+    }
+
+    .archive img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.02);
+    }
+
+    hr {
+      margin: 80px 0;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="hero">
+<!-- HERO -->
 <h1>Adam Owens</h1>
-<h3>Computational Mechanics • Manufacturing Engineering • Fabrication</h3>
-<p style="max-width:700px;margin:auto;">
-I investigate how geometry, material behavior, and manufacturing interact to create programmable structural systems. My work combines finite element analysis, numerical methods, experimental mechanics, and fabrication, with current research centered on kirigami-inspired energy dissipation.
-</p>
-<p><a href="https://github.com/adamtablemaker">GitHub</a></p>
-</div>
-
-<h2 style="text-align:center;">Engineering Research</h2>
-<p style="text-align:center;max-width:700px;margin:0 auto 70px;">
-Current investigations in finite element methods, computational mechanics, programmable structures, optimization, and experimental validation.
+<p>
+Geometry-driven systems spanning computation, structural behavior, and fabrication.
 </p>
 
-<div class="project">
-<div>
-<h3>Kirigami Energy Dissipation</h3>
-<p>Mechanical metamaterials for controlled deformation and energy absorption.</p>
-<div class="skills">Buckling • Nonlinear FEA • Abaqus • FEniCSx • Shell Mechanics • Experimental Validation</div>
-</div>
-<img src="images/kirigami_preview.jpg">
-</div>
+<p>
+<a href="https://github.com/adamtablemaker">GitHub</a>
+</p>
 
-<div class="project">
-<div>
-<h3>Structural Analysis</h3>
-<p>Computational studies spanning shell structures, optimization, and multi-load response.</p>
-<div class="skills">Bike Frame FEA • Ellipse Optimization • PDE Formulation</div>
-</div>
-<img src="images/bike_preview.jpg">
-</div>
+<!-- POSTERS -->
+<h2>Work</h2>
 
-<div class="project">
-<div>
-<h3>Wind Energy & Manufacturing</h3>
-<p>Applied engineering studies connecting data, manufacturing, and physical systems.</p>
-<div class="skills">Wind Energy • Additive Manufacturing • Toolpaths • Parametric Design</div>
-</div>
-<img src="images/wind1.jpg">
+<div class="grid">
+
+  <div class="poster">
+    <img src="images/kirigami_preview.jpg">
+    <div class="poster-title">Kirigami Energy Dissipation</div>
+  </div>
+
+  <div class="poster">
+    <img src="images/wind_screenshot.jpg">
+    <div class="poster-title">Wind → Structure → Energy</div>
+  </div>
+
+  <div class="poster">
+    <img src="images/bike_preview.jpg">
+    <div class="poster-title">Bike Frame Analysis</div>
+  </div>
+
+  <div class="poster">
+    <img src="images/ellipse_preview.jpg">
+    <div class="poster-title">Ellipse Optimization</div>
+  </div>
+
+  <div class="poster">
+    <img src="images/furniture_preview.jpg">
+    <div class="poster-title">Modular Fabrication System</div>
+  </div>
+
 </div>
 
 <hr>
 
-<h2 style="text-align:center;">Archive</h2>
-
-<h3 style="text-align:center;">Fabrication &amp; Material Practice</h3>
-
-<p style="max-width:760px;margin:20px auto 40px;text-align:center;">
-A continuing archive documenting fabrication, prototypes, furniture, tooling, public art, and engineering studies. While the projects vary in application, each contributed to an understanding of materials, manufacturing, structural behavior, and assembly that continues to inform my current research.
+<!-- ARCHIVE -->
+<h2>Archive</h2>
+<p>
+Fabrication work exploring material, tolerance, and assembly.
 </p>
 
-<p class="skills" style="text-align:center;margin-bottom:50px;">
-CAD • CAM • CNC Machining • Laser Cutting • TIG Welding • MIG Welding • Resistance Welding • Sheet Metal • Structural Steel • Woodworking • Furniture • Public Art • Tooling • Fixtures • Mechanical Assembly • Additive Manufacturing • Parametric Design • Rapid Prototyping
-</p>
+<div class="archive">
 
-<div class="archive-grid">
-<a href="images/nakcase1.JPG"><img class="thumb" src="images/nakcase1.JPG" loading="lazy"></a>
-<a href="images/IMG_4319.JPG"><img class="thumb" src="images/IMG_4319.JPG" loading="lazy"></a>
-<a href="images/stem3.jpg"><img class="thumb" src="images/stem3.jpg" loading="lazy"></a>
-<a href="images/TRESBRAZOS_TABLEBASE2.jpg"><img class="thumb" src="images/TRESBRAZOS_TABLEBASE2.jpg" loading="lazy"></a>
-<a href="images/IMG_2404.JPG"><img class="thumb" src="images/IMG_2404.JPG" loading="lazy"></a>
-<a href="images/shudder2.jpg"><img class="thumb" src="images/shudder2.jpg" loading="lazy"></a>
-<a href="images/IMG_8104.JPG"><img class="thumb" src="images/IMG_8104.JPG" loading="lazy"></a>
-<a href="images/TEMPO Shudder Philip Rogers Photo-22.jpg"><img class="thumb" src="images/TEMPO Shudder Philip Rogers Photo-22.jpg" loading="lazy"></a>
-<a href="images/IMG_3147.JPG"><img class="thumb" src="images/IMG_3147.JPG" loading="lazy"></a>
-<a href="images/stem7.jpg"><img class="thumb" src="images/stem7.jpg" loading="lazy"></a>
-<a href="images/QLFQE3123.JPG"><img class="thumb" src="images/QLFQE3123.JPG" loading="lazy"></a>
-<a href="images/TRESBRAZOS_WALLFRAME.jpg"><img class="thumb" src="images/TRESBRAZOS_WALLFRAME.jpg" loading="lazy"></a>
-<a href="images/nakcase3.JPG"><img class="thumb" src="images/nakcase3.JPG" loading="lazy"></a>
-<a href="images/IMG_7051.JPG"><img class="thumb" src="images/IMG_7051.JPG" loading="lazy"></a>
-<a href="images/stem1.JPG"><img class="thumb" src="images/stem1.JPG" loading="lazy"></a>
-<a href="images/IMG_3115.JPG"><img class="thumb" src="images/IMG_3115.JPG" loading="lazy"></a>
-<a href="images/nakcase2.JPG"><img class="thumb" src="images/nakcase2.JPG" loading="lazy"></a>
-<a href="images/shudder1.jpg"><img class="thumb" src="images/shudder1.jpg" loading="lazy"></a>
-<a href="images/shudder3.jpg"><img class="thumb" src="images/shudder3.jpg" loading="lazy"></a>
-<a href="images/stem2.jpg"><img class="thumb" src="images/stem2.jpg" loading="lazy"></a>
-<a href="images/stem4.JPG"><img class="thumb" src="images/stem4.JPG" loading="lazy"></a>
-<a href="images/stem5.jpg"><img class="thumb" src="images/stem5.jpg" loading="lazy"></a>
-<a href="images/stem6.jpg"><img class="thumb" src="images/stem6.jpg" loading="lazy"></a>
-<a href="images/IMG_2409.JPG"><img class="thumb" src="images/IMG_2409.JPG" loading="lazy"></a>
-<a href="images/TRESBRAZOS_3z.jpg"><img class="thumb" src="images/TRESBRAZOS_3z.jpg" loading="lazy"></a>
+  <img src="images/nakcase1.JPG">
+  <img src="images/nakcase2.JPG">
+  <img src="images/nakcase3.JPG">
+
+  <img src="images/shudder1.jpg">
+  <img src="images/shudder2.jpg">
+  <img src="images/shudder3.jpg">
+
+  <img src="images/TRESBRAZOS_3z.jpg">
+  <img src="images/TRESBRAZOS_WALLFRAME.jpg">
+  <img src="images/TRESBRAZOS_TABLEBASE2.jpg">
+
+  <img src="images/IMG_2404.JPG">
+  <img src="images/IMG_2409.JPG">
+  <img src="images/IMG_3115.JPG">
+
+  <img src="images/IMG_3147.JPG">
+  <img src="images/IMG_4319.JPG">
+  <img src="images/IMG_7051.JPG">
+
+  <img src="images/IMG_8104.JPG">
+  <img src="images/ADAM_OWENS_2.jpg">
+  <img src="images/EQOWE1408 - Copy.JPG">
 
 </div>
 
