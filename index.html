@@ -3,133 +3,124 @@
 <head>
   <title>Adam Owens</title>
 
-  <style>
-    body {
-      font-family: sans-serif;
-      max-width: 1000px;
-      margin: 60px auto;
-      line-height: 1.5;
-    }
+<style>
+body {
+  font-family: sans-serif;
+  max-width: 1000px;
+  margin: 70px auto;
+  line-height: 1.5;
+}
 
-    h1, h2 {
-      text-align: center;
-    }
+/* TOP */
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+}
 
-    p {
-      text-align: center;
-      color: #444;
-    }
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 40px;
+  margin-bottom: 60px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 30px;
-      margin-top: 40px;
-    }
+.project {
+  text-align: center;
+}
 
-    .poster {
-      text-align: center;
-    }
+.project img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #eee;
+}
 
-    .poster img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border: 1px solid #ddd;
-    }
+.project-title {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
 
-    .poster-title {
-      margin-top: 10px;
-      font-weight: bold;
-    }
+/* DIVIDER */
+.divider {
+  border-top: 1px solid #ccc;
+  margin: 60px 0;
+}
 
-    .archive {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 30px;
-    }
+/* ARCHIVE GRID */
+.archive {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
 
-    .archive img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      filter: grayscale(100%);
-      transition: 0.2s ease;
-    }
+.archive img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: 0.2s;
+}
 
-    .archive img:hover {
-      filter: grayscale(0%);
-      transform: scale(1.02);
-    }
+.archive img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+</style>
 
-    hr {
-      margin: 80px 0;
-    }
-  </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<h1>Adam Owens</h1>
-<p>
-Geometry-driven systems spanning computation, structural behavior, and fabrication.
-</p>
+<!-- HEADER -->
+<div class="header">
+  <h1>Adam Owens</h1>
+  <p>Geometry-driven systems spanning computation, structural behavior, and fabrication.</p>
+  <a href="#">GitHub</a>
+</div>
 
-<p>
-<a href="https://github.com/adamtablemaker">GitHub</a>
-</p>
-
-<!-- POSTERS -->
-<h2>Work</h2>
+<!-- WORK -->
+<h2 style="text-align:center;">Work</h2>
 
 <div class="grid">
 
-  <div class="poster">
-    <img src="images/kirigami_preview.jpg">
-    <div class="poster-title">Kirigami Energy Dissipation</div>
+  <div class="project">
+    <img src="images/kirigami.jpg">
+    <div class="project-title">Kirigami Energy Dissipation</div>
   </div>
 
-  <div class="poster">
-    <img src="images/wind_screenshot.jpg">
-    <div class="poster-title">Wind → Structure → Energy</div>
+  <div class="project">
+    <img src="images/wind.jpg">
+    <div class="project-title">Wind → Structure → Energy</div>
   </div>
 
-  <div class="poster">
-    <img src="images/bike_preview.jpg">
-    <div class="poster-title">Bike Frame Analysis</div>
+  <div class="project">
+    <img src="images/ellipse.jpg">
+    <div class="project-title">Ellipse Optimization</div>
   </div>
 
-  <div class="poster">
-    <img src="images/ellipse_preview.jpg">
-    <div class="poster-title">Ellipse Optimization</div>
-  </div>
-
-  <div class="poster">
-    <img src="images/furniture_preview.jpg">
-    <div class="poster-title">Modular Fabrication System</div>
+  <div class="project">
+    <img src="images/modular.jpg">
+    <div class="project-title">Modular Fabrication System</div>
   </div>
 
 </div>
 
-<hr>
+<div class="divider"></div>
 
 <!-- ARCHIVE -->
-<h2>Archive</h2>
-<p>
-Fabrication work exploring material, tolerance, and assembly.
+<h2 style="text-align:center;">Archive</h2>
+<p style="text-align:center; color:#666;">
+  Fabrication work exploring material, tolerance, and assembly.
 </p>
 
 <div class="archive">
 
-  <img src="images/nakcase1.JPG">
-  <img src="images/nakcase2.JPG">
-  <img src="images/nakcase3.JPG">
-
-  <img src="images/shudder1.jpg">
-  <img src="images/shudder2.jpg">
-  <img src="images/shudder3.jpg">
+  <!-- ALL SAME SIZE -->
+  <img src="images/IMG_4319.JPG">
+  <img src="images/IMG_7051.JPG">
+  <img src="images/IMG_8104.JPG">
 
   <img src="images/TRESBRAZOS_3z.jpg">
   <img src="images/TRESBRAZOS_WALLFRAME.jpg">
@@ -140,12 +131,8 @@ Fabrication work exploring material, tolerance, and assembly.
   <img src="images/IMG_3115.JPG">
 
   <img src="images/IMG_3147.JPG">
-  <img src="images/IMG_4319.JPG">
-  <img src="images/IMG_7051.JPG">
-
-  <img src="images/IMG_8104.JPG">
-  <img src="images/ADAM_OWENS_2.jpg">
-  <img src="images/EQOWE1408 - Copy.JPG">
+  <img src="images/QLFQE3123.JPG">
+  <img src="images/EQQWE1408 - Copy.JPG">
 
 </div>
 
