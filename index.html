@@ -1,71 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Adam Owens</title>
+<title>Adam Owens</title>
 
 <style>
 body {
-  font-family: sans-serif;
-  max-width: 1000px;
-  margin: 70px auto;
-  line-height: 1.5;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #fff;
 }
 
-/* TOP */
+/* MAIN WRAP */
+.container {
+  max-width: 1000px;
+  margin: 80px auto;
+}
+
+/* HEADER */
 .header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 
-/* GRID */
+.header h1 {
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.header p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* WORK GRID */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px 40px;
-  margin-bottom: 60px;
+  gap: 50px;
+  margin-bottom: 80px;
 }
 
-.project {
-  text-align: center;
+.project a {
+  text-decoration: none;
+  color: black;
 }
 
+/* IMAGE FRAME */
 .project img {
   width: 100%;
-  height: 180px;
+  height: 220px;
   object-fit: cover;
-  background: #eee;
+
+  border: 2px solid black;
+  padding: 8px;
+  background: white;
+
+  transition: 0.2s;
+}
+
+.project img:hover {
+  transform: scale(1.02);
 }
 
 .project-title {
-  margin-top: 10px;
-  font-weight: 600;
-  font-size: 14px;
+  margin-top: 12px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
 }
 
 /* DIVIDER */
 .divider {
   border-top: 1px solid #ccc;
-  margin: 60px 0;
+  margin: 80px 0;
 }
 
-/* ARCHIVE GRID */
+/* ARCHIVE */
 .archive {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
 }
 
-.archive img {
+.archive a img {
   width: 100%;
-  height: 140px;
+  height: 130px;
   object-fit: cover;
+
+  border: 1.5px solid black;
+  padding: 4px;
+  background: white;
+
   filter: grayscale(100%);
   transition: 0.2s;
 }
 
-.archive img:hover {
+.archive a img:hover {
   filter: grayscale(0%);
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 </style>
 
@@ -73,36 +108,51 @@ body {
 
 <body>
 
+<div class="container">
+
 <!-- HEADER -->
 <div class="header">
   <h1>Adam Owens</h1>
-  <p>Geometry-driven systems spanning computation, structural behavior, and fabrication.</p>
+  <p>
+    Geometry-driven systems exploring the relationship between structure,
+    computation, and fabrication. Work spans nonlinear mechanics,
+    energy dissipation, and constraint-based design—bridging analysis
+    and built form.
+  </p>
   <a href="#">GitHub</a>
 </div>
 
 <!-- WORK -->
-<h2 style="text-align:center;">Work</h2>
+<h2 style="text-align:center; font-weight:500; margin-bottom:50px;">Work</h2>
 
 <div class="grid">
 
   <div class="project">
-    <img src="images/kirigami.png">
-    <div class="project-title">Kirigami Energy Dissipation</div>
+    <a href="kirigami.html">
+      <img src="images/kirigami.png">
+      <div class="project-title">Kirigami Energy Dissipation</div>
+    </a>
   </div>
 
   <div class="project">
-    <img src="images/wind.png">
-    <div class="project-title">Wind → Structure → Energy</div>
+    <a href="wind.html">
+      <img src="images/wind.png">
+      <div class="project-title">Wind → Structure → Energy</div>
+    </a>
   </div>
 
   <div class="project">
-    <img src="images/ellipse.png">
-    <div class="project-title">Ellipse Optimization</div>
+    <a href="ellipse.html">
+      <img src="images/ellipse.png">
+      <div class="project-title">Ellipse Optimization</div>
+    </a>
   </div>
 
   <div class="project">
-    <img src="images/hybrid.png">
-    <div class="project-title">Modular Fabrication System</div>
+    <a href="modular.html">
+      <img src="images/hybrid.png">
+      <div class="project-title">Modular Fabrication System</div>
+    </a>
   </div>
 
 </div>
@@ -110,29 +160,30 @@ body {
 <div class="divider"></div>
 
 <!-- ARCHIVE -->
-<h2 style="text-align:center;">Archive</h2>
-<p style="text-align:center; color:#666;">
+<h2 style="text-align:center; font-weight:500;">Archive</h2>
+<p style="text-align:center; color:#666; margin-bottom:40px;">
   Fabrication work exploring material, tolerance, and assembly.
 </p>
 
 <div class="archive">
 
-  <!-- ALL SAME SIZE -->
-  <img src="images/IMG_4319.JPG">
-  <img src="images/IMG_7051.JPG">
-  <img src="images/IMG_8104.JPG">
+  <a href="images/IMG_4319.JPG"><img src="images/IMG_4319.JPG"></a>
+  <a href="images/IMG_7051.JPG"><img src="images/IMG_7051.JPG"></a>
+  <a href="images/IMG_8104.JPG"><img src="images/IMG_8104.JPG"></a>
 
-  <img src="images/TRESBRAZOS_3z.jpg">
-  <img src="images/TRESBRAZOS_WALLFRAME.jpg">
-  <img src="images/TRESBRAZOS_TABLEBASE2.jpg">
+  <a href="images/TRESBRAZOS_3z.jpg"><img src="images/TRESBRAZOS_3z.jpg"></a>
+  <a href="images/TRESBRAZOS_WALLFRAME.jpg"><img src="images/TRESBRAZOS_WALLFRAME.jpg"></a>
+  <a href="images/TRESBRAZOS_TABLEBASE2.jpg"><img src="images/TRESBRAZOS_TABLEBASE2.jpg"></a>
 
-  <img src="images/IMG_2404.JPG">
-  <img src="images/IMG_2409.JPG">
-  <img src="images/IMG_3115.JPG">
+  <a href="images/IMG_2404.JPG"><img src="images/IMG_2404.JPG"></a>
+  <a href="images/IMG_2409.JPG"><img src="images/IMG_2409.JPG"></a>
+  <a href="images/IMG_3115.JPG"><img src="images/IMG_3115.JPG"></a>
 
-  <img src="images/IMG_3147.JPG">
-  <img src="images/QLFQE3123.JPG">
-  <img src="images/EQQWE1408 - Copy.JPG">
+  <a href="images/IMG_3147.JPG"><img src="images/IMG_3147.JPG"></a>
+  <a href="images/QLFQE3123.JPG"><img src="images/QLFQE3123.JPG"></a>
+  <a href="images/EQQWE1408 - Copy.JPG"><img src="images/EQQWE1408 - Copy.JPG"></a>
+
+</div>
 
 </div>
 
