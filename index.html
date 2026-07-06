@@ -26,20 +26,42 @@ body {
 .header h1 {
   font-size: 52px;
   margin-bottom: 10px;
-  font-weight: 500;
 }
 
-  .header h2 {
+.header h2 {
   font-size: 22px;
   margin-bottom: 18px;
-  font-weight: 400;
   letter-spacing: 1px;
+  font-weight: 400;
 }
 
-  .header p {
-  font-size: 18px;
-  max-width: 700px;
+.header p {
+  font-size: 19px;
+  max-width: 720px;
   margin: 0 auto 15px;
+  line-height: 1.7;
+}
+
+/* ICON LINKS */
+.links {
+  margin-top: 10px;
+}
+
+.links img {
+  width: 22px;
+  margin: 0 10px;
+  filter: grayscale(100%);
+}
+
+.links img:hover {
+  filter: grayscale(0%);
+}
+
+/* SECTION TITLE */
+.section-title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 60px;
 }
 
 /* PROJECT ROW */
@@ -114,7 +136,6 @@ body {
 <!-- HEADER -->
 <div class="header">
   <h1>Adam Owens</h1>
-
   <h2>Geometry / Structure / Fabrication</h2>
 
   <p>
@@ -122,8 +143,20 @@ body {
     and energy dissipation to fabrication systems and parametric control.
   </p>
 
-  <a href="https://github.com/">GitHub</a>
+  <div class="links">
+    <a href="https://github.com/YOUR_USERNAME" target="_blank">
+      <img src="images/github.svg">
+    </a>
+
+    <a href="https://instagram.com/YOUR_HANDLE" target="_blank">
+      <img src="images/instagram.svg">
+    </a>
+  </div>
 </div>
+
+<!-- SECTION -->
+<div class="section-title">Energy-Driven Research</div>
+
 <!-- PROJECTS -->
 
 <div class="project-row">
