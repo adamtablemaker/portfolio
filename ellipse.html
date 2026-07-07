@@ -1,38 +1,226 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Project</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ellipse Stress Optimization | Adam Owens</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-  font-family: "Cormorant Garamond", serif;
-  max-width: 900px;
-  margin: 80px auto;
+*{box-sizing:border-box}
+body{
+margin:0;
+background:#fff;
+color:#111;
+font-family:"Cormorant Garamond",serif;
+line-height:1.75;
 }
-
-img {
-  width: 100%;
-  margin: 30px 0;
+.container{
+max-width:1050px;
+margin:90px auto;
+padding:0 32px;
 }
-
-h1 {
-  font-size: 36px;
+a{color:#111;text-decoration:none}
+.back{font-size:20px}
+h1{
+font-size:64px;
+font-weight:600;
+margin:40px 0 8px;
+}
+.subtitle{
+font-size:30px;
+margin-bottom:35px;
+font-weight:400;
+}
+.lead{
+font-size:23px;
+max-width:850px;
+}
+.rule{
+border-top:1px solid #d8d8d8;
+margin:75px 0;
+}
+.meta{
+display:grid;
+grid-template-columns:220px 1fr;
+row-gap:16px;
+column-gap:20px;
+font-size:22px;
+}
+.section{
+margin:80px 0;
+}
+.section h2{
+font-size:38px;
+margin-bottom:18px;
+font-weight:500;
+letter-spacing:.5px;
+}
+.section p{
+font-size:22px;
+max-width:860px;
+}
+figure{
+margin:60px 0;
+}
+img{
+width:100%;
+display:block;
+border:1px solid #ddd;
+}
+figcaption{
+margin-top:10px;
+font-size:18px;
+font-style:italic;
+color:#666;
+}
+.related{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+margin-top:40px;
+}
+.related a{
+display:block;
+border-top:1px solid #111;
+padding-top:12px;
+font-size:24px;
+}
+footer{
+margin:90px 0 40px;
+font-size:18px;
+color:#666;
+text-align:center;
+}
+@media(max-width:800px){
+h1{font-size:46px}
+.subtitle{font-size:24px}
+.meta{grid-template-columns:1fr}
+.related{grid-template-columns:1fr}
 }
 </style>
 </head>
-
 <body>
 
-<a href="index.html">← back</a>
+<div class="container">
 
-<h1>Project Title</h1>
+<a class="back" href="index.html">&larr; Back to Portfolio</a>
 
-<p>Short description of what this project is about.</p>
+<h1>Ellipse Stress Optimization</h1>
 
-<img src="images/project_image1.png">
-<img src="images/project_image2.png">
+<div class="subtitle">Geometry as a Structural Design Variable</div>
 
+<p class="lead">
+Large wind-loaded structures are commonly optimized by increasing section size or
+material thickness. This project instead investigates geometry itself as the
+primary design variable, deriving analytical relationships between taper,
+projected wind area, bending moments and stress within elliptical hollow
+sections. The resulting framework establishes a foundation for computational
+optimization and future finite element validation.
+</p>
+
+<div class="rule"></div>
+
+<div class="meta">
+<div><strong>Research Area</strong></div><div>Structural Optimization</div>
+<div><strong>Topics</strong></div><div>Mechanics of Materials • Wind Engineering • Analytical Modeling</div>
+<div><strong>Software</strong></div><div>MATLAB • Excel • SolidWorks • LaTeX</div>
+<div><strong>Year</strong></div><div>2025</div>
+</div>
+
+<div class="rule"></div>
+
+<div class="section">
+<h2>Project Overview</h2>
+<p>
+The work develops a closed-form analytical framework for tapered elliptical
+tubular structures subjected to orthogonal wind loading. Rather than treating
+geometry as fixed, the major axis, minor axis and taper become continuous design
+variables that influence projected area, bending moments, section properties and
+allowable stresses.
+</p>
+</div>
+
+<div class="section">
+<h2>Concept Development</h2>
+
+<figure><img src="ellipse/PROJECT_P02_24.jpg" alt=""><figcaption>Figure 01 · Initial analytical concept.</figcaption></figure>
+
+<figure><img src="ellipse/PROJECT_P02_24_UNITSQUARE.jpg" alt=""><figcaption>Figure 02 · Unit-square parameterization.</figcaption></figure>
+
+<figure><img src="ellipse/PROJECT_P02_24_UNITSQUARE_2.jpg" alt=""><figcaption>Figure 03 · Progressive refinement of the geometric design space.</figcaption></figure>
+
+<figure><img src="ellipse/PROJECT_P02_24_UNITSQUARE_3.jpg" alt=""><figcaption>Figure 04 · Final analytical framework.</figcaption></figure>
+</div>
+
+<div class="rule"></div>
+
+<div class="section">
+<h2>Variable Geometry</h2>
+
+<figure><img src="ellipse/ELLIPSE_TAPER.jpg" alt=""><figcaption>Symmetric taper applied to the major and minor axes.</figcaption></figure>
+
+<figure><img src="ellipse/ELLIPSE_WIND.jpg" alt=""><figcaption>Wind loading model.</figcaption></figure>
+
+<figure><img src="ellipse/ELLIPSE_WIND_PROJAREA.jpg" alt=""><figcaption>Projected area used in force calculations.</figcaption></figure>
+</div>
+
+<div class="rule"></div>
+
+<div class="section">
+<h2>Orthogonal Wind Loading</h2>
+
+<figure><img src="ellipse/ELLIPSE_WINDX.jpg" alt=""><figcaption>Loading in the x-direction.</figcaption></figure>
+
+<figure><img src="ellipse/ELLIPSE_WINDX_d.jpg" alt=""><figcaption>Analytical derivation.</figcaption></figure>
+
+<figure><img src="ellipse/ELLIPSE_WINDZ.jpg" alt=""><figcaption>Loading in the z-direction.</figcaption></figure>
+
+<figure><img src="ellipse/ELLIPSE_WINDZ_d.jpg" alt=""><figcaption>Analytical derivation.</figcaption></figure>
+</div>
+
+<div class="rule"></div>
+
+<div class="section">
+<h2>Stress Formulation</h2>
+
+<figure><img src="ellipse/ELLIPSE_WIND_MOIX.jpg" alt=""><figcaption>Bending stress formulation about the major axis.</figcaption></figure>
+
+<figure><img src="ellipse/ELLIPSE_WIND_MOIZ.jpg" alt=""><figcaption>Bending stress formulation about the minor axis.</figcaption></figure>
+</div>
+
+<div class="rule"></div>
+
+<div class="section">
+<h2>Research Outcome</h2>
+
+<p>
+This analytical methodology demonstrates how geometry can be used as an active
+optimization variable rather than a fixed input. The framework provides a basis
+for integrating closed-form mechanics with numerical optimization and finite
+element simulation, enabling efficient structural design while maintaining
+manufacturable geometry.
+</p>
+</div>
+
+<div class="rule"></div>
+
+<div class="section">
+<h2>Related Projects</h2>
+
+<div class="related">
+<a href="kirigami.html">Kirigami Energy Dissipation</a>
+<a href="wind.html">Wind → Structure → Energy</a>
+<a href="modular.html">Hybrid Fabrication System</a>
+</div>
+
+</div>
+
+<footer>
+© Adam Owens
+</footer>
+
+</div>
 </body>
 </html>
