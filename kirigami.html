@@ -1,1 +1,684 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kirigami Energy Dissipation</title><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet"><style>*{box-sizing:border-box}body{margin:0;font-family:'Cormorant Garamond',serif;line-height:1.75;color:#111}.container{max-width:1080px;margin:80px auto;padding:32px}h1{font-size:64px}.subtitle{font-size:30px}.lead{font-size:22px;max-width:860px}.rule{border-top:1px solid #ddd;margin:60px 0}.meta{display:grid;grid-template-columns:220px 1fr;gap:12px;font-size:22px}.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.gallery3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}img{width:100%;border:1px solid #ddd}figcaption{font-style:italic;color:#666}a{text-decoration:none;color:#111}.related{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.related a{border-top:1px solid #111;padding-top:10px}</style></head><body><div class="container"><a href="index.html">&larr; Back</a><h1>Kirigami Energy Dissipation</h1><div class="subtitle">Programming Geometry for Controlled Instability</div><img src="kirigami/MESH3_MODE5_ISO_UR.png"><p class="lead">This project investigates kirigami cut patterns as programmable geometric imperfections for controlling deformation, buckling and energy absorption in thin metallic structures.</p><div class="rule"></div><div class="meta"><div><b>Research</b></div><div>M.S. Thesis</div><div><b>Software</b></div><div>Abaqus · MATLAB · FEniCS · SolidWorks</div><div><b>Topics</b></div><div>Kirigami · Buckling · Energy Dissipation</div></div><div class="rule"></div><h2>Geometry Programming</h2><div class="gallery"><figure><img src="kirigami/UNITCELL_4.png"><figcaption>Unit cell.</figcaption></figure><figure><img src="kirigami/LIGAMENT_MINIPP_FULLINT.png"><figcaption>Ligament mechanics.</figcaption></figure></div><div class="rule"></div><h2>Eigenvalue Buckling</h2><div class="gallery3"><figure><img src="kirigami/11X1_MODE1_ISO.png"><figcaption>Mode 1</figcaption></figure><figure><img src="kirigami/11X1_MODE5_ISO.png"><figcaption>Mode 5</figcaption></figure><figure><img src="kirigami/11X1_MODE10_ISO.png"><figcaption>Mode 10</figcaption></figure><figure><img src="kirigami/11X1_MODE15_ISO.png"><figcaption>Mode 15</figcaption></figure><figure><img src="kirigami/11X1_MODE20_ISO.png"><figcaption>Mode 20</figcaption></figure><figure><img src="kirigami/23X1_MODE11_ISO.png"><figcaption>Localization</figcaption></figure></div><div class="rule"></div><h2>Finite Element Results</h2><div class="gallery"><figure><img src="kirigami/ASSEMBLY2_MESH4_MESH.png"><figcaption>Mesh.</figcaption></figure><figure><img src="kirigami/ASSEMBLY2_MESH4_STRESS.png"><figcaption>Stress.</figcaption></figure><figure><img src="kirigami/ASSEMBLY2_MESH4_DISPLACEMENT.png"><figcaption>Displacement.</figcaption></figure><figure><img src="kirigami/ASSEMBLY2_MESH4_STESS_CLOSEUP.png"><figcaption>Stress detail.</figcaption></figure></div><div class="rule"></div><h2>Experimental Validation</h2><div class="gallery"><figure><img src="kirigami/IMG_0216.jpeg"><figcaption>Prototype.</figcaption></figure><figure><img src="kirigami/IMG_0219.jpeg"><figcaption>Testing.</figcaption></figure></div><div class="rule"></div><h2>Applications</h2><p class="lead">Applications include crash attenuation, fall-arrest systems, adaptive structures and programmable energy absorption.</p><div class="rule"></div><h2>Related Projects</h2><div class="related"><a href="ellipse.html">Ellipse</a><a href="wind.html">Wind</a><a href="modular.html">Hybrid Fabrication</a></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kirigami Energy Dissipation | Adam Owens</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+
+margin:0;
+background:#ffffff;
+color:#111;
+font-family:"Cormorant Garamond", serif;
+line-height:1.75;
+
+}
+
+.container{
+
+max-width:1050px;
+margin:90px auto;
+padding:0 30px;
+
+}
+
+a{
+
+color:#111;
+text-decoration:none;
+
+}
+
+.back{
+
+font-size:20px;
+
+}
+
+.hero{
+
+margin-top:35px;
+
+}
+
+.hero img{
+
+width:100%;
+display:block;
+border:1px solid #ddd;
+
+}
+
+h1{
+
+font-size:60px;
+font-weight:600;
+margin:45px 0 6px;
+
+}
+
+.subtitle{
+
+font-size:28px;
+font-weight:400;
+margin-bottom:30px;
+
+}
+
+.lead{
+
+font-size:23px;
+max-width:860px;
+
+}
+
+.rule{
+
+border-top:1px solid #d6d6d6;
+margin:75px 0;
+
+}
+
+.meta{
+
+display:grid;
+grid-template-columns:220px 1fr;
+column-gap:25px;
+row-gap:15px;
+font-size:21px;
+
+}
+
+.section{
+
+margin:80px 0;
+
+}
+
+.section h2{
+
+font-size:38px;
+font-weight:500;
+margin-bottom:18px;
+
+}
+
+.section p{
+
+font-size:22px;
+max-width:850px;
+
+}
+
+.gallery-two{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:28px;
+
+}
+
+.gallery-three{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+
+}
+
+figure{
+
+margin:0;
+
+}
+
+figure img{
+
+width:100%;
+display:block;
+border:1px solid #ddd;
+
+}
+
+figcaption{
+
+font-size:18px;
+font-style:italic;
+color:#666;
+margin-top:10px;
+
+}
+
+.related{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+
+}
+
+.related a{
+
+display:block;
+border-top:1px solid #111;
+padding-top:10px;
+font-size:24px;
+
+}
+
+footer{
+
+margin:100px 0 40px;
+text-align:center;
+font-size:18px;
+color:#666;
+
+}
+
+@media(max-width:850px){
+
+.gallery-two,
+.gallery-three,
+.related{
+
+grid-template-columns:1fr;
+
+}
+
+.meta{
+
+grid-template-columns:1fr;
+
+}
+
+h1{
+
+font-size:46px;
+
+}
+
+.subtitle{
+
+font-size:24px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="back" href="index.html">&larr; Back to Portfolio</a>
+
+<div class="hero">
+
+<img src="kirigami/MESH3_MODE5_ISO_UR.png" alt="Kirigami">
+
+</div>
+
+<h1>Kirigami Energy Dissipation</h1>
+
+<div class="subtitle">
+
+Programming Geometry for Controlled Instability
+
+</div>
+
+<p class="lead">
+
+This research investigates kirigami cut patterns as programmable geometric
+imperfections capable of controlling deformation, instability, and energy
+absorption in thin metallic sheets and shell structures. Rather than treating
+buckling as structural failure, instability becomes an intentional design
+mechanism for tailoring force–displacement response and energy dissipation.
+
+</p>
+
+<div class="rule"></div>
+
+<div class="meta">
+
+<div><strong>Research</strong></div>
+<div>M.S. Thesis — Texas State University</div>
+
+<div><strong>Topics</strong></div>
+<div>Kirigami · Buckling · Finite Element Analysis · Energy Dissipation</div>
+
+<div><strong>Software</strong></div>
+<div>Abaqus · MATLAB · FEniCS · SolidWorks</div>
+
+<div><strong>Status</strong></div>
+<div>Graduate Research — 2026</div>
+
+</div>
+
+<div class="rule"></div>
+
+<div class="section">
+
+<h2>Geometry Programming</h2>
+
+<p>
+
+The foundation of this work is the kirigami unit cell.
+Rather than treating cut geometry as decorative,
+ligament width, hinge geometry, unit-cell dimensions
+and spatial grading become design variables governing
+stiffness, instability and deformation sequencing.
+
+</p>
+
+<div class="gallery-two">
+
+<figure>
+
+<img src="kirigami/UNITCELL_4.png">
+
+<figcaption>
+
+Figure 01 · Ribbon kirigami unit cell geometry.
+
+</figcaption>
+
+</figure>
+
+<figure>
+
+<img src="kirigami/LIGAMENT_MINIPP_FULLINT.png">
+
+<figcaption>
+
+Figure 02 · Ligament interaction and localized deformation.
+
+</figcaption>
+
+</figure>
+
+</div>
+
+</div>
+
+<div class="rule"></div>
+
+<div class="section">
+
+<h2>Eigenvalue Buckling</h2>
+
+<p>
+
+Prestress-dependent eigenmodes are treated as design
+primitives rather than indicators of failure.
+The lowest modes define preferred deformation pathways,
+providing a means of programming localization before
+nonlinear collapse begins.
+
+</p>
+
+<div class="gallery-three">
+
+<figure>
+
+<img src="kirigami/11X1_MODE1_ISO.png">
+
+<figcaption>
+
+Mode 1
+
+</figcaption>
+
+</figure>
+
+<figure>
+
+<img src="kirigami/11X1_MODE5_ISO.png">
+
+<figcaption>
+
+Mode 5
+
+</figcaption>
+
+</figure>
+
+<figure>
+
+<img src="kirigami/11X1_MODE10_ISO.png">
+
+<figcaption>
+
+Mode 10
+
+</figcaption>
+<figure>
+
+<img src="kirigami/11X1_MODE15_ISO.png">
+
+<figcaption>
+
+Mode 15
+
+</figcaption>
+
+</figure>
+
+<figure>
+
+<img src="kirigami/11X1_MODE20_ISO.png">
+
+<figcaption>
+
+Mode 20
+
+</figcaption>
+
+</figure>
+
+<figure>
+
+<img src="kirigami/23X1_MODE11_ISO.png">
+
+<figcaption>
+
+Localized Eigenmode
+
+</figcaption>
+
+</figure>
+
+</div>
+
+</div>
+
+<div class="rule"></div>
+
+<div class="section">
+
+<h2>Finite Element Analysis</h2>
+
+<p>
+
+Abaqus eigenvalue buckling and nonlinear post-buckling
+analyses were used to investigate instability localization,
+mesh convergence and stress propagation through graded
+kirigami ribbons. Controlled geometric imperfections
+seeded the nonlinear response and enabled comparison
+between analytical predictions and numerical behavior.
+
+</p>
+
+<div class="gallery-two">
+
+<figure>
+
+<img src="kirigami/ASSEMBLY2_MESH4_MESH.png">
+
+<figcaption>
+
+Figure 03 · Refined finite element mesh.
+
+</figcaption>
+
+</figure>
+
+<figure>
+
+<img src="kirigami/ASSEMBLY2_MESH4_DISPLACEMENT.png">
+
+<figcaption>
+
+Figure 04 · Displacement field.
+
+</figcaption>
+
+</figure>
+
+<figure>
+
+<img src="kirigami/ASSEMBLY2_MESH4_STRESS.png">
+
+<figcaption>
+
+Figure 05 · Von Mises stress distribution.
+
+</figcaption>
+
+</figure>
+
+<figure>
+
+<img src="kirigami/ASSEMBLY2_MESH4_STESS_CLOSEUP.png">
+
+<figcaption>
+
+Figure 06 · Stress localization near kirigami ligaments.
+
+</figcaption>
+
+</figure>
+
+</div>
+
+</div>
+
+<div class="rule"></div>
+
+<div class="section">
+
+<h2>Experimental Validation</h2>
+
+<p>
+
+Laser-cut aluminum specimens were fabricated and tested
+to compare observed deformation pathways with finite
+element predictions. The experiments confirmed that
+geometry alone strongly influences instability activation,
+rotation of the unit cells and global force–displacement
+behavior.
+
+</p>
+
+<div class="gallery-two">
+
+<figure>
+
+<img src="kirigami/IMG_0216.jpeg">
+
+<figcaption>
+
+Figure 07 · Fabricated kirigami specimen.
+
+</figcaption>
+
+</figure>
+
+<figure>
+
+<img src="kirigami/IMG_0219.jpeg">
+
+<figcaption>
+
+Figure 08 · Experimental prototype.
+
+</figcaption>
+
+</figure>
+
+</div>
+
+</div>
+
+<div class="rule"></div>
+
+<div class="section">
+
+<h2>Energy Dissipation</h2>
+
+<p>
+
+Traditional thin sheets delay significant energy absorption
+until material yielding or fracture occurs. By introducing
+engineered kirigami geometries, deformation can instead
+be localized, propagated and sequenced through geometric
+instability. The resulting structures behave as programmable
+mechanical systems whose force–displacement response is
+governed primarily by geometry rather than material alone.
+
+</p>
+
+</div>
+
+<div class="rule"></div>
+
+  <div class="section">
+
+<h2>Applications</h2>
+
+<p>
+
+Although developed as a study in nonlinear structural
+mechanics, the broader objective is the creation of
+programmable energy-absorbing systems. By embedding
+deformation pathways directly into geometry, kirigami
+structures offer an alternative to conventional crush
+mechanisms that depend primarily on material yielding.
+Potential applications include crash attenuation,
+fall-arrest devices, protective infrastructure,
+deployable structures, adaptive façades and lightweight
+energy-dissipating components for aerospace and civil
+engineering.
+
+</p>
+
+</div>
+
+<div class="rule"></div>
+
+<div class="section">
+
+<h2>Research Direction</h2>
+
+<p>
+
+Current work expands these concepts beyond flat ribbon
+specimens toward curved shells and thin-walled cylinders.
+Spatial grading of unit-cell geometry is used to localize
+prestress-dependent eigenmodes, allowing deformation
+to propagate in a prescribed sequence. The long-term
+goal is a geometry-based framework for programming
+force–displacement response using mechanics rather than
+material alone.
+
+</p>
+
+</div>
+
+<div class="rule"></div>
+
+<div class="section">
+
+<h2>Selected Image Archive</h2>
+
+<div class="gallery-three">
+
+<figure>
+
+<img src="kirigami/MESH3_5MODES_1.png">
+
+<figcaption>
+
+Sequential Mode Development
+
+</figcaption>
+
+</figure>
+
+<figure>
+
+<img src="kirigami/MESH3_5MODES_3.png">
+
+<figcaption>
+
+Progressive Localization
+
+</figcaption>
+
+</figure>
+
+<figure>
+
+<img src="kirigami/MESH3_5MODES_5_ISO_UR.png">
+
+<figcaption>
+
+Final Buckling Configuration
+
+</figcaption>
+
+</figure>
+
+</div>
+
+</div>
+
+<div class="rule"></div>
+
+<div class="section">
+
+<h2>Related Projects</h2>
+
+<div class="related">
+
+<a href="ellipse.html">
+
+Ellipse Stress Optimization
+
+</a>
+
+<a href="wind.html">
+
+Wind → Structure → Energy
+
+</a>
+
+<a href="modular.html">
+
+Hybrid Fabrication System
+
+</a>
+
+</div>
+
+</div>
+
+<footer>
+
+© Adam Owens
+
+<br><br>
+
+Geometry • Mechanics • Fabrication • Computational Design
+
+</footer>
+
+</div>
+
+</body>
+
+</html>
+</figure>
