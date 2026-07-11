@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -12,32 +11,71 @@
 
 <style>
 
-*{
-box-sizing:border-box;
-}
-
 body{
 
 margin:0;
-background:#fff;
-color:#111;
+background:white;
 font-family:"Cormorant Garamond",serif;
-line-height:1.75;
+color:#111;
+line-height:1.8;
 
 }
 
 .container{
 
-max-width:1080px;
+max-width:1100px;
 margin:90px auto;
-padding:0 32px;
+padding:0 30px;
 
 }
 
-a{
+img{
 
-color:#111;
-text-decoration:none;
+width:100%;
+display:block;
+border:1px solid #ddd;
+
+}
+
+.hero{
+
+margin-bottom:60px;
+
+}
+
+h1{
+
+font-size:60px;
+margin:40px 0 8px;
+
+}
+
+.subtitle{
+
+font-size:28px;
+margin-bottom:35px;
+
+}
+
+p{
+
+font-size:22px;
+
+max-width:900px;
+
+}
+
+.section{
+
+margin:90px 0;
+
+}
+
+.section h2{
+
+font-size:38px;
+
+margin-bottom:18px;
 
 }
 
@@ -45,142 +83,41 @@ text-decoration:none;
 
 font-size:20px;
 
-}
+text-decoration:none;
 
-.hero{
-
-margin-top:35px;
-
-}
-
-.hero img{
-
-width:100%;
-display:block;
-border:1px solid #ddd;
-
-}
-
-h1{
-
-font-size:60px;
-font-weight:600;
-margin:45px 0 6px;
-
-}
-
-.subtitle{
-
-font-size:28px;
-margin-bottom:28px;
-
-}
-
-.lead{
-
-font-size:22px;
-max-width:900px;
+color:black;
 
 }
 
 .rule{
 
 border-top:1px solid #ddd;
+
 margin:70px 0;
-
-}
-
-.meta{
-
-display:grid;
-grid-template-columns:220px 1fr;
-gap:14px;
-font-size:21px;
-
-}
-
-.section{
-
-margin:80px 0;
-
-}
-
-.section h2{
-
-font-size:38px;
-font-weight:500;
-margin-bottom:16px;
-
-}
-
-.gallery-two{
-
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:24px;
-
-}
-
-figure{
-
-margin:0;
-
-}
-
-figure img{
-
-width:100%;
-display:block;
-border:1px solid #ddd;
-
-}
-
-figcaption{
-
-margin-top:10px;
-font-size:18px;
-font-style:italic;
-color:#666;
 
 }
 
 .related{
 
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
+
+grid-template-columns:1fr 1fr;
+
+gap:25px;
 
 }
 
 .related a{
 
-display:block;
-border-top:1px solid #111;
+text-decoration:none;
+
+color:black;
+
+font-size:24px;
+
+border-top:1px solid black;
+
 padding-top:10px;
-font-size:23px;
-
-}
-
-@media(max-width:850px){
-
-.gallery-two,
-.related{
-
-grid-template-columns:1fr;
-
-}
-
-.meta{
-
-grid-template-columns:1fr;
-
-}
-
-h1{
-
-font-size:46px;
-
-}
 
 }
 
@@ -192,15 +129,23 @@ font-size:46px;
 
 <div class="container">
 
-<a class="back" href="index.html">&larr; Back to Portfolio</a>
+<a class="back" href="index.html">
+
+← Back to Portfolio
+
+</a>
 
 <div class="hero">
 
-<img src="hybrid/ADDITIVE_GRADPOSTER.jpg" alt="Modular Fabrication Systems">
+<img src="hybrid/HYBRIDFURNITURE_Page_14.jpg">
 
 </div>
 
-<h1>Modular Fabrication Systems</h1>
+<h1>
+
+Modular Fabrication Systems
+
+</h1>
 
 <div class="subtitle">
 
@@ -208,78 +153,36 @@ Bridging Computational Design and Physical Construction
 
 </div>
 
-<p class="lead">
+<p>
 
-This research explores modular fabrication systems that combine standardized
-commercial materials with custom digitally manufactured components. Rather
-than designing isolated products, the project develops a reusable construction
-language built from off-the-shelf structural elements and engineered printed
-parts. The result is an adaptable framework capable of producing furniture,
-fixtures, and future structural systems through computational design and
-digital fabrication.
+This research investigates a modular fabrication framework that combines
+standardized commercial materials with digitally manufactured components.
+Rather than designing fixed products, the project develops a reusable
+construction language capable of adapting to new applications through
+computational design, additive manufacturing, and rapid prototyping.
 
 </p>
 
 <div class="rule"></div>
 
-<div class="meta">
-
-<div><strong>Research</strong></div>
-<div>Modular Fabrication Systems</div>
-
-<div><strong>Topics</strong></div>
-<div>Computational Design • Additive Manufacturing • Modular Design • Product Development</div>
-
-<div><strong>Software</strong></div>
-<div>SolidWorks • Cura • 3D Printing • CAD</div>
-
-<div><strong>Status</strong></div>
-<div>Graduate Research • Texas State University</div>
-
-</div>
-
-<div class="rule"></div>
-
 <div class="section">
 
-<h2>Design Philosophy</h2>
+<h2>
+
+Design Philosophy
+
+</h2>
+
+<img src="hybrid/HYBRIDFURNITURE_Page_02.jpg">
 
 <p>
 
-The project rethinks furniture as a modular system instead of a fixed object.
-Standardized materials remain constant while custom printed components provide
-adaptability, allowing structures to evolve without redesigning the entire
-assembly.
+The project begins by reconsidering how furniture is designed and produced.
+Instead of manufacturing unique components for every product, standardized
+materials are paired with custom printed interfaces. This approach reduces
+waste while allowing local fabrication, repair, and continual adaptation.
 
 </p>
-
-<div class="gallery-two">
-
-<figure>
-
-<img src="hybrid/Assembly1.jpg">
-
-<figcaption>
-
-System overview and modular architecture.
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-<img src="hybrid/TXSTGRAPHIC.jpg">
-
-<figcaption>
-
-Research workflow and fabrication strategy.
-
-</figcaption>
-
-</figure>
-
-</div>
 
 </div>
 
@@ -287,44 +190,21 @@ Research workflow and fabrication strategy.
 
 <div class="section">
 
-<h2>Standard Components + Custom Intelligence</h2>
+<h2>
+
+Material Strategy
+
+</h2>
+
+<img src="hybrid/HYBRIDFURNITURE_Page_03.jpg">
 
 <p>
 
-Widely available PVC tubing forms the primary structural members while custom
-3D printed interfaces introduce geometry-specific functionality. The resulting
-hybrid system combines the economy of standardized materials with the precision
-and adaptability of digital manufacturing.
+Schedule 40 PVC provides an inexpensive and widely available structural
+framework while custom components introduce geometry-specific functionality.
+The system combines accessibility with computational flexibility.
 
 </p>
-
-<div class="gallery-two">
-
-<figure>
-
-<img src="hybrid/ADAPTER_EXIT.jpg">
-
-<figcaption>
-
-Custom adapter development.
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-<img src="hybrid/DRAG_EXITMOUNT.jpg">
-
-<figcaption>
-
-Iterative CAD refinement.
-
-</figcaption>
-
-</figure>
-
-</div>
 
 </div>
 
@@ -332,44 +212,22 @@ Iterative CAD refinement.
 
 <div class="section">
 
-<h2>Digital Fabrication</h2>
+<h2>
+
+Prototype Development
+
+</h2>
+
+<img src="hybrid/HYBRIDFURNITURE_Page_06.jpg">
 
 <p>
 
-Every connection was modeled digitally before fabrication. Component geometry,
-assembly tolerances, print orientation, and modular interfaces were refined
-through rapid prototyping to create repeatable assemblies that integrate
-directly with standardized materials.
+The floor lamp serves as the primary proof-of-concept. Every design decision
+balances structural form, assembly logic, dimensional accuracy, and functional
+requirements while demonstrating how a small family of reusable joints can
+generate complete products.
 
 </p>
-
-<div class="gallery-two">
-
-<figure>
-
-<img src="hybrid/PIPEOD_PLUGOD.jpg">
-
-<figcaption>
-
-Connection geometry.
-
-</figcaption>
-
-</figure></figure>
-
-<figure>
-
-<img src="hybrid/lifestyle_luminator_white_04.jpg">
-
-<figcaption>
-
-Completed modular floor lamp prototype.
-
-</figcaption>
-
-</figure>
-
-</div>
 
 </div>
 
@@ -377,45 +235,21 @@ Completed modular floor lamp prototype.
 
 <div class="section">
 
-<h2>Prototype Development</h2>
+<h2>
+
+Connection System
+
+</h2>
+
+<img src="hybrid/HYBRIDFURNITURE_Page_07.jpg">
 
 <p>
 
-The floor lamp served as the primary proof-of-concept for the modular
-fabrication system. Rather than designing a single finished product, the
-prototype demonstrated how a small family of reusable joints could generate
-multiple structural configurations. Every component was designed around
-repeatability, dimensional accuracy, and rapid assembly.
+Custom adapters provide the intelligence of the system. Internal and external
+sleeves, compression-fit interfaces, O-rings, clips, and modular fasteners
+allow standardized structural members to become configurable building blocks.
 
 </p>
-
-<div class="gallery-two">
-
-<figure>
-
-<img src="hybrid/lifestyle_luminator_white_04.jpg">
-
-<figcaption>
-
-Assembled prototype demonstrating the modular system.
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-<img src="hybrid/Assembly1.jpg">
-
-<figcaption>
-
-Exploded assembly showing reusable structural components.
-
-</figcaption>
-
-</figure>
-
-</div>
 
 </div>
 
@@ -423,45 +257,22 @@ Exploded assembly showing reusable structural components.
 
 <div class="section">
 
-<h2>Connection Design</h2>
+<h2>
+
+Digital Fabrication
+
+</h2>
+
+<img src="hybrid/HYBRIDFURNITURE_Page_10.jpg">
 
 <p>
 
-The printed nodes function as the computational intelligence of the system.
-Each connection communicates its own method of assembly while maintaining
-tight tolerances with standardized PVC tubing. Instead of permanent joints,
-the system emphasizes repeatable assembly, disassembly, repair, and future
-adaptation.
+Each component is modeled digitally and optimized for additive manufacturing.
+Print orientation, tolerances, and assembly interfaces are refined through
+rapid iteration, creating repeatable components capable of integrating directly
+with standardized materials.
 
 </p>
-
-<div class="gallery-two">
-
-<figure>
-
-<img src="hybrid/ADAPTER_EXIT.jpg">
-
-<figcaption>
-
-Adapter interface with integrated assembly features.
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-<img src="hybrid/PIPEOD_PLUGOD.jpg">
-
-<figcaption>
-
-Dimensional control of pipe and plug geometry.
-
-</figcaption>
-
-</figure>
-
-</div>
 
 </div>
 
@@ -469,78 +280,20 @@ Dimensional control of pipe and plug geometry.
 
 <div class="section">
 
-<h2>Manufacturing Workflow</h2>
+<h2>
+
+Future Development
+
+</h2>
+
+<img src="hybrid/HYBRIDFURNITURE_Page_12.jpg">
 
 <p>
 
-Every component begins as a parametric CAD model before moving into additive
-manufacturing. Print orientation, layer height, tolerances, and support
-strategy were refined through repeated iterations to improve strength,
-surface finish, and assembly performance while minimizing material waste.
-
-</p>
-
-<div class="gallery-two">
-
-<figure>
-
-<img src="hybrid/DRAG_EXITMOUNT.jpg">
-
-<figcaption>
-
-CAD development and refinement.
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-<img src="hybrid/TXSTGRAPHIC.jpg">
-
-<figcaption>
-
-Digital workflow from concept to fabrication.
-
-</figcaption>
-
-</figure>
-
-</div>
-
-</div>
-
-<div class="rule"></div>
-
-<div class="section">
-
-<h2>Performance</h2>
-
-<p>
-
-Prototype testing demonstrated reliable press-fit engagement, repeatable
-assembly, and structural stability while supporting representative loading.
-The modular strategy allows individual parts to be replaced or reused without
-discarding the complete structure, supporting an adaptable and repairable
-design philosophy.
-
-</p>
-
-</div>
-
-<div class="rule"></div>
-<div class="section">
-
-<h2>Research Philosophy</h2>
-
-<p>
-
-The long-term objective extends beyond furniture. This project establishes a
-general fabrication framework where standardized structural members are paired
-with computationally designed components to rapidly produce adaptable physical
-systems. The same design principles can be applied to furniture, temporary
-structures, exhibition systems, deployable shelters, research apparatus, and
-future responsive structures.
+Future work expands the system beyond furniture into deployable structures,
+architectural assemblies, research equipment, and responsive environments.
+The modular platform provides a foundation for computational fabrication across
+multiple scales and material systems.
 
 </p>
 
@@ -548,79 +301,11 @@ future responsive structures.
 
 <div class="rule"></div>
 
-<div class="section">
+<h2>
 
-<h2>Future Research</h2>
+Related Research
 
-<p>
-
-Current work focuses on expanding the system through improved structural
-analysis, alternative materials, and computational optimization. Future
-iterations will investigate aluminum tubing, composite members, bamboo,
-lightweight alloys, robotic fabrication, and digitally generated connection
-families capable of supporting increasingly complex assemblies.
-
-</p>
-
-<div class="gallery-two">
-
-<figure>
-
-<img src="hybrid/Assembly1.jpg">
-
-<figcaption>
-
-The modular system serves as a platform for future structural exploration.
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-<img src="hybrid/lifestyle_luminator_white_04.jpg">
-
-<figcaption>
-
-From proof-of-concept prototype toward a reusable construction language.
-
-</figcaption>
-
-</figure>
-
-</div>
-
-</div>
-
-<div class="rule"></div>
-
-<div class="section">
-
-<h2>Research Themes</h2>
-
-<div class="meta">
-
-<div><strong>Design</strong></div>
-<div>Parametric CAD and modular design logic.</div>
-
-<div><strong>Fabrication</strong></div>
-<div>Additive manufacturing integrated with standardized structural materials.</div>
-
-<div><strong>Engineering</strong></div>
-<div>Dimensional control, tolerancing, repeatability, and rapid prototyping.</div>
-
-<div><strong>Sustainability</strong></div>
-<div>Distributed manufacturing, local sourcing, repairability, and component reuse.</div>
-
-</div>
-
-</div>
-
-<div class="rule"></div>
-
-<div class="section">
-
-<h2>Related Research</h2>
+</h2>
 
 <div class="related">
 
@@ -636,25 +321,7 @@ Kirigami Energy Dissipation
 
 </a>
 
-<a href="index.html">
-
-Back to Portfolio
-
-</a>
-
 </div>
-
-</div>
-
-<footer style="margin:100px 0 50px;text-align:center;font-size:18px;color:#666;">
-
-© Adam Owens
-
-<br><br>
-
-Geometry &nbsp;•&nbsp; Computation &nbsp;•&nbsp; Fabrication
-
-</footer>
 
 </div>
 
