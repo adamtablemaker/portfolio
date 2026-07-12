@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -11,12 +12,16 @@
 
 <style>
 
+*{
+box-sizing:border-box;
+}
+
 body{
 
 margin:0;
-background:white;
-font-family:"Cormorant Garamond",serif;
+background:#ffffff;
 color:#111;
+font-family:"Cormorant Garamond",serif;
 line-height:1.8;
 
 }
@@ -25,11 +30,24 @@ line-height:1.8;
 
 max-width:1100px;
 margin:90px auto;
-padding:0 30px;
+padding:0 35px;
 
 }
 
-img{
+a{
+
+text-decoration:none;
+color:#111;
+
+}
+
+.back{
+
+font-size:20px;
+
+}
+
+.hero img{
 
 width:100%;
 display:block;
@@ -37,16 +55,11 @@ border:1px solid #ddd;
 
 }
 
-.hero{
-
-margin-bottom:60px;
-
-}
-
 h1{
 
 font-size:60px;
-margin:40px 0 8px;
+font-weight:600;
+margin:45px 0 8px;
 
 }
 
@@ -57,10 +70,9 @@ margin-bottom:35px;
 
 }
 
-p{
+.lead{
 
 font-size:22px;
-
 max-width:900px;
 
 }
@@ -74,25 +86,23 @@ margin:90px 0;
 .section h2{
 
 font-size:38px;
-
-margin-bottom:18px;
+font-weight:500;
+margin-bottom:20px;
 
 }
 
-.back{
+.section img{
 
-font-size:20px;
-
-text-decoration:none;
-
-color:black;
+width:100%;
+display:block;
+border:1px solid #ddd;
+margin-bottom:30px;
 
 }
 
 .rule{
 
 border-top:1px solid #ddd;
-
 margin:70px 0;
 
 }
@@ -100,24 +110,33 @@ margin:70px 0;
 .related{
 
 display:grid;
-
-grid-template-columns:1fr 1fr;
-
+grid-template-columns:repeat(2,1fr);
 gap:25px;
 
 }
 
 .related a{
 
-text-decoration:none;
-
-color:black;
-
+display:block;
 font-size:24px;
+border-top:1px solid #111;
+padding-top:12px;
 
-border-top:1px solid black;
+}
 
-padding-top:10px;
+@media(max-width:850px){
+
+.related{
+
+grid-template-columns:1fr;
+
+}
+
+h1{
+
+font-size:44px;
+
+}
 
 }
 
@@ -153,12 +172,12 @@ Bridging Computational Design and Physical Construction
 
 </div>
 
-<p>
+<p class="lead">
 
-This research investigates a modular fabrication framework that combines
-standardized commercial materials with digitally manufactured components.
-Rather than designing fixed products, the project develops a reusable
-construction language capable of adapting to new applications through
+This research investigates a modular construction system that combines
+standardized structural materials with digitally fabricated components.
+Rather than designing individual products, the project develops a reusable
+construction language capable of producing adaptable physical systems through
 computational design, additive manufacturing, and rapid prototyping.
 
 </p>
@@ -175,12 +194,12 @@ Design Philosophy
 
 <img src="hybrid/HYBRIDFURNITURE_Page_02.jpg">
 
-<p>
+<p class="lead">
 
-The project begins by reconsidering how furniture is designed and produced.
-Instead of manufacturing unique components for every product, standardized
-materials are paired with custom printed interfaces. This approach reduces
-waste while allowing local fabrication, repair, and continual adaptation.
+The project begins by rethinking furniture as a modular platform rather than a
+single finished object. Standardized materials remain constant while custom
+fabricated components provide adaptability, repairability, and rapid
+reconfiguration for new applications.
 
 </p>
 
@@ -198,11 +217,11 @@ Material Strategy
 
 <img src="hybrid/HYBRIDFURNITURE_Page_03.jpg">
 
-<p>
+<p class="lead">
 
-Schedule 40 PVC provides an inexpensive and widely available structural
-framework while custom components introduce geometry-specific functionality.
-The system combines accessibility with computational flexibility.
+Readily available Schedule 40 PVC tubing forms the structural framework while
+custom printed interfaces provide geometry-specific functionality. The hybrid
+approach combines accessibility, repeatability, and computational flexibility.
 
 </p>
 
@@ -220,111 +239,14 @@ Prototype Development
 
 <img src="hybrid/HYBRIDFURNITURE_Page_06.jpg">
 
-<p>
+<p class="lead">
 
-The floor lamp serves as the primary proof-of-concept. Every design decision
-balances structural form, assembly logic, dimensional accuracy, and functional
-requirements while demonstrating how a small family of reusable joints can
-generate complete products.
-
-</p>
-
-</div>
-
-<div class="rule"></div>
-
-<div class="section">
-
-<h2>
-
-Connection System
-
-</h2>
-
-<img src="hybrid/HYBRIDFURNITURE_Page_07.jpg">
-
-<p>
-
-Custom adapters provide the intelligence of the system. Internal and external
-sleeves, compression-fit interfaces, O-rings, clips, and modular fasteners
-allow standardized structural members to become configurable building blocks.
+The floor lamp demonstrates the modular system as a proof of concept.
+A small family of reusable joints generates a complete structural assembly,
+illustrating how digital design can produce adaptable physical products.
 
 </p>
 
 </div>
 
 <div class="rule"></div>
-
-<div class="section">
-
-<h2>
-
-Digital Fabrication
-
-</h2>
-
-<img src="hybrid/HYBRIDFURNITURE_Page_10.jpg">
-
-<p>
-
-Each component is modeled digitally and optimized for additive manufacturing.
-Print orientation, tolerances, and assembly interfaces are refined through
-rapid iteration, creating repeatable components capable of integrating directly
-with standardized materials.
-
-</p>
-
-</div>
-
-<div class="rule"></div>
-
-<div class="section">
-
-<h2>
-
-Future Development
-
-</h2>
-
-<img src="hybrid/HYBRIDFURNITURE_Page_12.jpg">
-
-<p>
-
-Future work expands the system beyond furniture into deployable structures,
-architectural assemblies, research equipment, and responsive environments.
-The modular platform provides a foundation for computational fabrication across
-multiple scales and material systems.
-
-</p>
-
-</div>
-
-<div class="rule"></div>
-
-<h2>
-
-Related Research
-
-</h2>
-
-<div class="related">
-
-<a href="ellipse.html">
-
-Ellipse Stress Optimization
-
-</a>
-
-<a href="kirigami.html">
-
-Kirigami Energy Dissipation
-
-</a>
-
-</div>
-
-</div>
-
-</body>
-
-</html>
