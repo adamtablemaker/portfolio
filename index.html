@@ -1,133 +1,130 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <title>Adam Owens</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  margin: 0;
-  background: #fff;
+
+body{
+font-family:"Cormorant Garamond",Georgia,serif;
+margin:0;
+background:white;
 }
 
-.container {
-  max-width: 1050px;
-  margin: 90px auto;
+.container{
+max-width:1050px;
+margin:90px auto;
 }
 
-/* HEADER */
-.header {
-  text-align: center;
-  margin-bottom: 110px;
+.header{
+text-align:center;
+margin-bottom:110px;
 }
 
-.header h1 {
-  font-size: 60px;
-  margin-bottom: 10px;
+.header h1{
+font-size:60px;
+margin-bottom:10px;
 }
 
-.header h2 {
-  font-size: 26px;
-  margin-bottom: 18px;
-  letter-spacing: 1px;
-  font-weight: 400;
+.header h2{
+font-size:26px;
+font-weight:400;
+letter-spacing:1px;
+margin-bottom:18px;
 }
 
-.header p {
-  font-size: 21px;
-  max-width: 750px;
-  margin: 0 auto 20px;
-  line-height: 1.7;
+.header p{
+font-size:21px;
+max-width:760px;
+margin:0 auto 22px;
+line-height:1.7;
 }
 
-/* ICON LINKS (FIXED) */
-.links {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 10px;
+.links{
+display:flex;
+justify-content:center;
+gap:18px;
+margin-top:10px;
 }
 
-.links img {
-  width: 24px;
-  display: block;
-  filter: grayscale(100%);
+.links img{
+width:24px;
+display:block;
+filter:grayscale(100%);
 }
 
-.links img:hover {
-  filter: grayscale(0%);
+.links img:hover{
+filter:none;
 }
 
-/* SECTION TITLE */
-.section-title {
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 70px;
+.section-title{
+text-align:center;
+font-size:30px;
+margin-bottom:70px;
 }
 
-/* PROJECT ROW */
-.project-row {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  gap: 50px;
-  margin-bottom: 100px;
-  align-items: center;
+.project-row{
+display:grid;
+grid-template-columns:40% 60%;
+gap:50px;
+align-items:center;
+margin-bottom:100px;
 }
 
-.project-row img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-
-  border: 2px solid black;
-  padding: 10px;
-  background: white;
+.project-row img{
+width:100%;
+height:280px;
+object-fit:cover;
+border:2px solid black;
+padding:10px;
+background:white;
 }
 
-.project-row h3 {
-  font-size: 38px;
-  margin: 0 0 12px;
+.project-row h3{
+font-size:38px;
+margin:0 0 12px;
 }
 
-.project-row p {
-  font-size: 20px;
-  margin: 0 0 12px;
+.project-row p{
+font-size:20px;
+margin:0 0 14px;
+line-height:1.5;
 }
 
-.project-row a {
-  text-decoration: none;
-  color: black;
+.project-row a{
+text-decoration:none;
+color:black;
 }
 
-/* DIVIDER */
-.divider {
-  border-top: 1px solid #ccc;
-  margin: 90px 0;
+.divider{
+border-top:1px solid #ccc;
+margin:90px 0;
 }
 
-/* ARCHIVE */
-.archive {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
+.archive{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:14px;
 }
 
-.archive a img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-
-  border: none;
-  padding: 0;
-
-  filter: grayscale(100%);
+.archive img{
+width:100%;
+height:150px;
+object-fit:cover;
+display:block;
+filter:grayscale(100%);
+transition:.25s;
 }
 
-.archive a img:hover {
-  filter: grayscale(0%);
+.archive img:hover{
+filter:none;
+transform:scale(1.02);
 }
+
 </style>
 
 </head>
@@ -136,102 +133,223 @@ body {
 
 <div class="container">
 
-<!-- HEADER -->
 <div class="header">
-  <h1>Adam Owens</h1>
-  <h2>Geometry / Structure / Fabrication</h2>
 
-  <p>
-    Investigating how geometry governs structural behavior — from nonlinear deformation
-    and energy dissipation to fabrication systems and parametric control.
-  </p>
+<h1>Adam Owens</h1>
 
-  <div class="links">
-    <a href="https://github.com/adamtablemaker" target="_blank">
-      <img src="images/github.svg">
-    </a>
+<h2>Geometry / Mechanics / Computation / Fabrication</h2>
 
-    <a href="https://instagram.com/adamwadeowens" target="_blank">
-      <img src="images/instagram.svg">
-    </a>
-  </div>
+<p>
+
+Investigating how geometry governs structural behavior—from analytical
+mechanics and nonlinear deformation to computational modeling and
+digital fabrication.
+
+</p>
+
+<div class="links">
+
+<a href="https://github.com/adamtablemaker" target="_blank">
+
+<img src="images/github.svg">
+
+</a>
+
+<a href="https://instagram.com/adamwadeowens" target="_blank">
+
+<img src="images/instagram.svg">
+
+</a>
+
 </div>
 
-<!-- SECTION -->
-<div class="section-title">Energy-Driven Research</div>
-
-<!-- PROJECTS -->
-
-<div class="project-row">
-  <a href="kirigami.html">
-    <img src="images/kirigami.png">
-  </a>
-  <div>
-    <h3>Kirigami Energy Dissipation</h3>
-    <p>Eigenvalue buckling, nonlinear propagation, energy absorption.</p>
-    <a href="kirigami.html">view project</a>
-  </div>
 </div>
 
-<div class="project-row">
-  <a href="wind.html">
-    <img src="images/wind.png">
-  </a>
-  <div>
-    <h3>Wind → Structure → Energy</h3>
-    <p>Weibull modeling, stress response, energy extraction.</p>
-    <a href="wind.html">view project</a>
-  </div>
+<div class="section-title">
+
+Selected Research
+
 </div>
 
 <div class="project-row">
-  <a href="ellipse.html">
-    <img src="images/ellipse.png">
-  </a>
-  <div>
-    <h3>Ellipse Optimization</h3>
-    <p>Geometry as control variable, stiffness tuning, parametric study.</p>
-    <a href="ellipse.html">view project</a>
-  </div>
+
+<a href="kirigami.html">
+
+<img src="images/kirigami.png">
+
+</a>
+
+<div>
+
+<h3>
+
+Kirigami Energy Dissipation
+
+</h3>
+
+<p>
+
+Programming geometry for controlled instability through computational
+mechanics, finite element analysis, and experimental validation.
+
+</p>
+
+<a href="kirigami.html">
+
+View Project →
+
+</a>
+
+</div>
+
 </div>
 
 <div class="project-row">
-  <a href="modular.html">
-    <img src="images/hybrid.png">
-  </a>
-  <div>
-    <h3>Modular Fabrication System</h3>
-    <p>3D printed joints, distributed fabrication, system logic.</p>
-    <a href="modular.html">view project</a>
-  </div>
+
+<a href="ellipse.html">
+
+<img src="images/ellipse.png">
+
+</a>
+
+<div>
+
+<h3>
+
+Ellipse Stress Optimization
+
+</h3>
+
+<p>
+
+Analytical optimization of elliptical structural members through stress
+analysis, geometry, and closed-form mechanics.
+
+</p>
+
+<a href="ellipse.html">
+
+View Project →
+
+</a>
+
+</div>
+
+</div>
+
+<div class="project-row">
+
+<a href="modular.html">
+
+<img src="images/hybrid.png">
+
+</a>
+
+<div>
+
+<h3>
+
+Modular Fabrication Systems
+
+</h3>
+
+<p>
+
+Combining standardized structural materials with computationally designed
+components to create adaptable fabrication systems.
+
+</p>
+
+<a href="modular.html">
+
+View Project →
+
+</a>
+
+</div>
+
 </div>
 
 <div class="divider"></div>
 
-<!-- ARCHIVE -->
-<h2 style="text-align:center; font-size:28px;">Archive</h2>
+<h2 style="text-align:center;font-size:30px;margin-bottom:50px;">
+
+Archive
+
+</h2>
 
 <div class="archive">
+  
+<a href="images/IMG_0216.jpeg"><img src="images/IMG_0216.jpeg"></a>
 
-  <a href="images/IMG_4319.JPG"><img src="images/IMG_4319.JPG"></a>
-  <a href="images/IMG_7051.JPG"><img src="images/IMG_7051.JPG"></a>
-  <a href="images/IMG_8104.JPG"><img src="images/IMG_8104.JPG"></a>
+<a href="images/IMG_0217.jpeg"><img src="images/IMG_0217.jpeg"></a>
 
-  <a href="images/TRESBRAZOS_3z.jpg"><img src="images/TRESBRAZOS_3z.jpg"></a>
-  <a href="images/TRESBRAZOS_WALLFRAME.jpg"><img src="images/TRESBRAZOS_WALLFRAME.jpg"></a>
-  <a href="images/TRESBRAZOS_TABLEBASE2.jpg"><img src="images/TRESBRAZOS_TABLEBASE2.jpg"></a>
+<a href="images/IMG_0218.jpeg"><img src="images/IMG_0218.jpeg"></a>
 
-  <a href="images/IMG_2404.JPG"><img src="images/IMG_2404.JPG"></a>
-  <a href="images/IMG_2409.JPG"><img src="images/IMG_2409.JPG"></a>
-  <a href="images/IMG_3115.JPG"><img src="images/IMG_3115.JPG"></a>
+<a href="images/IMG_0219.jpeg"><img src="images/IMG_0219.jpeg"></a>
 
-  <a href="images/IMG_3147.JPG"><img src="images/IMG_3147.JPG"></a>
-  <a href="images/QLFQE3123.JPG"><img src="images/QLFQE3123.JPG"></a>
-  <a href="images/EQQWE1408 - Copy.JPG"><img src="images/EQQWE1408 - Copy.JPG"></a>
+<a href="images/IMG_2404.JPG"><img src="images/IMG_2404.JPG"></a>
+
+<a href="images/IMG_2409.JPG"><img src="images/IMG_2409.JPG"></a>
+
+<a href="images/IMG_3115.JPG"><img src="images/IMG_3115.JPG"></a>
+
+<a href="images/IMG_3147.JPG"><img src="images/IMG_3147.JPG"></a>
+
+<a href="images/IMG_4319.JPG"><img src="images/IMG_4319.JPG"></a>
+
+<a href="images/IMG_7051.JPG"><img src="images/IMG_7051.JPG"></a>
+
+<a href="images/IMG_8104.JPG"><img src="images/IMG_8104.JPG"></a>
+
+<a href="images/ADAM_OWENS_2.jpg"><img src="images/ADAM_OWENS_2.jpg"></a>
+
+<a href="images/EQQWE1408 - Copy.JPG"><img src="images/EQQWE1408 - Copy.JPG"></a>
+
+<a href="images/QLFQE3123.JPG"><img src="images/QLFQE3123.JPG"></a>
+
+<a href="images/TRESBRAZOS_3z.jpg"><img src="images/TRESBRAZOS_3z.jpg"></a>
+
+<a href="images/TRESBRAZOS_TABLEBASE2.jpg"><img src="images/TRESBRAZOS_TABLEBASE2.jpg"></a>
+
+<a href="images/TRESBRAZOS_WALLFRAME.jpg"><img src="images/TRESBRAZOS_WALLFRAME.jpg"></a>
+
+<a href="images/TEMPO Shudder Philip Rogers Photo-22.jpg"><img src="images/TEMPO Shudder Philip Rogers Photo-22.jpg"></a>
+
+<a href="images/MESH3_5MODES_5_ISO_UR.png"><img src="images/MESH3_5MODES_5_ISO_UR.png"></a>
+
+<a href="images/UNITCELL_4.png"><img src="images/UNITCELL_4.png"></a>
+
+<a href="images/stem1.JPG"><img src="images/stem1.JPG"></a>
+
+<a href="images/stem2.jpg"><img src="images/stem2.jpg"></a>
+
+<a href="images/stem3.jpg"><img src="images/stem3.jpg"></a>
+
+<a href="images/stem4.JPG"><img src="images/stem4.JPG"></a>
+
+<a href="images/stem5.jpg"><img src="images/stem5.jpg"></a>
+
+<a href="images/stem6.jpg"><img src="images/stem6.jpg"></a>
+
+<a href="images/stem7.jpg"><img src="images/stem7.jpg"></a>
+
+<a href="images/shudder1.jpg"><img src="images/shudder1.jpg"></a>
+
+<a href="images/shudder2.jpg"><img src="images/shudder2.jpg"></a>
+
+<a href="images/shudder3.jpg"><img src="images/shudder3.jpg"></a>
+
+<a href="images/nakcase1.JPG"><img src="images/nakcase1.JPG"></a>
+
+<a href="images/nakcase2.JPG"><img src="images/nakcase2.JPG"></a>
+
+<a href="images/nakcase3.JPG"><img src="images/nakcase3.JPG"></a>
 
 </div>
 
 </div>
 
 </body>
+
 </html>
