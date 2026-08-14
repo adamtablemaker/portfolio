@@ -243,15 +243,33 @@ h1 {
 document.querySelectorAll('.gallery img').forEach(function (img) {
   var originalPath = img.getAttribute('src');
   var fileName = originalPath.substring(originalPath.lastIndexOf('/') + 1);
-  var fixedPath = '/portfolio/works/' + encodeURIComponent(fileName) + '?v=20260814-2';
-  img.src = fixedPath;
+  var upperExtensionName = fileName.replace(/\.jpg$/i, '.JPG');
+  var encodedName = encodeURIComponent(fileName);
+  var encodedUpperName = encodeURIComponent(upperExtensionName);
+  var paths = [
+    '/portfolio/works/' + encodedName + '?v=20260814-3',
+    '/portfolio/works/' + encodedUpperName + '?v=20260814-3',
+    'https://raw.githubusercontent.com/adamtablemaker/portfolio/main/works/' + encodedName,
+    'https://raw.githubusercontent.com/adamtablemaker/portfolio/main/works/' + encodedUpperName
+  ];
+
+  var pathIndex = 0;
+  img.onerror = function () {
+    pathIndex += 1;
+    if (pathIndex < paths.length) {
+      img.src = paths[pathIndex];
+      link.href = paths[pathIndex];
+    }
+  };
+
   var link = document.createElement('a');
-  link.href = fixedPath;
+  link.href = paths[0];
   link.target = '_blank';
   link.rel = 'noopener';
   link.setAttribute('aria-label', 'Open full-size image');
   img.parentNode.insertBefore(link, img);
   link.appendChild(img);
+  img.src = paths[0];
 });
 </script>
 </body>
