@@ -18,106 +18,110 @@ box-sizing:border-box;
 }
 
 body{
-
 font-family:'Cormorant Garamond',serif;
 background:#fff;
 color:#222;
-
 }
 
 .wrapper{
-
-max-width:1100px;
-margin:80px auto;
-padding:0 40px;
-
+max-width:1120px;
+margin:90px auto;
+padding:0 42px;
 }
 
 h1{
-
-font-size:54px;
+font-size:56px;
 font-weight:500;
-margin-bottom:8px;
-
+margin-bottom:10px;
 }
 
 .intro{
-
 font-size:18px;
 color:#666;
-margin-bottom:70px;
-
+margin-bottom:90px;
+max-width:720px;
 }
 
 .section{
-
-margin-bottom:90px;
-
+margin-bottom:130px;
 }
 
-.section h2{
+.section-header{
+margin:120px 0 70px;
+}
 
-font-size:15px;
+.section-header hr{
+border:none;
+border-top:1px solid #cfcfcf;
+margin-bottom:28px;
+}
+
+.section-header h2{
+font-size:28px;
 font-weight:500;
-letter-spacing:.25em;
+letter-spacing:.16em;
 text-transform:uppercase;
-margin-bottom:8px;
-
+margin-bottom:12px;
 }
 
-.section p{
-
-color:#777;
-margin-bottom:35px;
+.section-header p{
 font-size:17px;
-
+color:#777;
+max-width:700px;
 }
 
 .project{
-
-margin-bottom:70px;
-
+margin-bottom:90px;
 }
 
 .project h3{
-
-font-size:30px;
+font-size:34px;
 font-weight:500;
-margin-bottom:22px;
+margin-bottom:18px;
+}
 
+.project p{
+font-size:17px;
+line-height:1.55;
+color:#666;
+max-width:760px;
+margin-bottom:28px;
 }
 
 .gallery{
-
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:18px;
-
 }
 
 .gallery img{
-
 width:100%;
 display:block;
 transition:.25s;
 cursor:pointer;
-
 }
 
 .gallery img:hover{
-
 transform:scale(1.02);
+}
 
+.hero{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.hero-image{
+grid-column:1 / span 3;
+width:100%;
 }
 
 .footer{
-
-margin:120px 0 60px;
+margin:120px 0 50px;
 text-align:center;
-letter-spacing:.25em;
 font-size:14px;
+letter-spacing:.22em;
 color:#777;
-
 }
 
 </style>
@@ -131,38 +135,36 @@ color:#777;
 <h1>Selected Works</h1>
 
 <div class="intro">
-Selected architectural fabrication, engineering, and built work.
+Selected architectural fabrication, engineering, installation, and photographic work.
 </div>
 
 <div class="section">
 
-<h2>Turnkey Design · Fabrication · Installation</h2>
+<div class="section-header">
 
-<p>Projects conceived, engineered, fabricated, and installed from concept through completion.</p>
+<h2>TURNKEY DESIGN · FABRICATION · INSTALLATION</h2>
 
-
-<div class="project">
-
-<h3>Outdoor Tables</h3>
-
-<div class="gallery">
-
-<img src="works/DIVETABLE1 (1).jpg">
-<img src="works/DIVETABLE1 (2).jpg">
-<img src="works/DIVETABLE1 (3).jpg">
-<img src="works/DIVETABLE1 (4).jpg">
-<img src="works/DIVETABLE1 (5).jpg">
+<p>
+Projects conceived, engineered, fabricated, and installed from concept through completion.
+</p>
 
 </div>
 
-</div>
 
 
 <div class="project">
 
 <h3>Public Art</h3>
 
-<div class="gallery">
+<p>
+<b>Tempo</b> — 2018 Austin Art in Public Places (AIPP). Permanent public artwork designed,
+engineered, fabricated, and installed for the City of Austin. The project integrated
+structural steel fabrication, lighting, digital fabrication, and site installation.
+</p>
+
+<div class="hero">
+
+<img class="hero-image" src="works/SHUDDER7.jpg">
 
 <img src="works/SHUDDER1.jpg">
 <img src="works/SHUDDER2.jpg">
@@ -170,16 +172,21 @@ Selected architectural fabrication, engineering, and built work.
 <img src="works/SHUDDER4.jpg">
 <img src="works/SHUDDER5.jpg">
 <img src="works/SHUDDER6.jpg">
-<img src="works/SHUDDER7.jpg">
 
 </div>
 
 </div>
+
 
 
 <div class="project">
 
 <h3>Conference Table</h3>
+
+<p>
+Custom steel and hardwood conference table designed, engineered,
+fabricated, and installed for commercial use.
+</p>
 
 <div class="gallery">
 
@@ -195,15 +202,47 @@ Selected architectural fabrication, engineering, and built work.
 
 </div>
 
+
+
+<div class="project">
+
+<h3>Outdoor Tables</h3>
+
+<p>
+Exterior steel and thermally modified wood tables designed for
+long-term public use and fabricated for commercial environments.
+</p>
+
+<div class="gallery">
+
+<img src="works/DIVETABLE1 (3).jpg">
+<img src="works/DIVETABLE1 (5).jpg">
+<img src="works/DIVETABLE1 (2).jpg">
+<img src="works/DIVETABLE1 (4).jpg">
+<img src="works/DIVETABLE1 (1).jpg">
+
+</div>
+
+</div>
+
 </div>
 
 
 
 <div class="section">
 
-<h2>Fabrication · Installation</h2>
+<div class="section-header">
 
-<p>Projects fabricated and installed from architect and client developed designs.</p>
+<hr>
+
+<h2>FABRICATION · INSTALLATION</h2>
+
+<p>
+Projects fabricated and installed from architect and client-developed designs.
+</p>
+
+</div>
+
 
 
 <div class="project">
@@ -271,14 +310,13 @@ Selected architectural fabrication, engineering, and built work.
 
 </div>
 
-<div class="footer">
 
-GEOMETRY · DESIGN · FABRICATION · INSTALLATION
 
-</div>
-
-</div>
 <div class="section">
+
+<div class="section-header">
+
+<hr>
 
 <h2>PHOTOGRAPHY</h2>
 
@@ -287,6 +325,10 @@ Selected photographs from South Texas, Seminole Canyon, the Lower Pecos,
 and the U.S.–Mexico border. Observations of landscape, structure,
 infrastructure, and time.
 </p>
+
+</div>
+
+
 
 <div class="gallery">
 
@@ -304,7 +346,16 @@ infrastructure, and time.
 </div>
 
 </div>
-  
-</body>
 
+
+
+<div class="footer">
+
+GEOMETRY · DESIGN · FABRICATION · INSTALLATION
+
+</div>
+
+</div>
+
+</body>
 </html>
