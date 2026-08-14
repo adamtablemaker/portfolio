@@ -133,12 +133,12 @@ h1 {
       <h3>Public Art</h3>
       <p><strong>Tempo</strong> — 2018 Austin Art in Public Places (AIPP). Permanent public artwork designed, engineered, fabricated, and installed for the City of Austin. The project integrated structural steel fabrication, lighting, digital fabrication, and site installation.</p>
       <div class="gallery">
-        <img src="works/SHUDDER1.jpg" alt="Tempo public artwork 1" loading="lazy">
-        <img src="works/SHUDDER2.jpg" alt="Tempo public artwork 2" loading="lazy">
+        <img src="works/SHUDDER1.JPG" alt="Tempo public artwork 1" loading="lazy">
+        <img src="works/SHUDDER2.JPG" alt="Tempo public artwork 2" loading="lazy">
         <img src="works/SHUDDER3.jpg" alt="Tempo public artwork 3" loading="lazy">
         <img src="works/SHUDDER4.jpg" alt="Tempo public artwork 4" loading="lazy">
         <img src="works/SHUDDER5.jpg" alt="Tempo public artwork 5" loading="lazy">
-        <img src="works/SHUDDER6.jpg" alt="Tempo public artwork 6" loading="lazy">
+        <img src="works/SHUDDER6.JPG" alt="Tempo public artwork 6" loading="lazy">
         <img src="works/SHUDDER7.jpg" alt="Tempo public artwork 7" loading="lazy">
       </div>
     </article>
@@ -147,10 +147,10 @@ h1 {
       <h3>Conference Table</h3>
       <p>Custom steel and hardwood conference table designed, engineered, fabricated, and installed for commercial use.</p>
       <div class="gallery">
-        <img src="works/stem1.jpg" alt="Conference table 1" loading="lazy">
+        <img src="works/stem1.JPG" alt="Conference table 1" loading="lazy">
         <img src="works/stem2.jpg" alt="Conference table 2" loading="lazy">
         <img src="works/stem3.jpg" alt="Conference table 3" loading="lazy">
-        <img src="works/stem4.jpg" alt="Conference table 4" loading="lazy">
+        <img src="works/stem4.JPG" alt="Conference table 4" loading="lazy">
         <img src="works/stem5.jpg" alt="Conference table 5" loading="lazy">
         <img src="works/stem6.jpg" alt="Conference table 6" loading="lazy">
         <img src="works/stem7.jpg" alt="Conference table 7" loading="lazy">
@@ -180,20 +180,20 @@ h1 {
     <article class="project">
       <h3>Jewelry Case</h3>
       <div class="gallery">
-        <img src="works/nakcase1.jpg" alt="Jewelry case 1" loading="lazy">
-        <img src="works/nakcase2.jpg" alt="Jewelry case 2" loading="lazy">
-        <img src="works/nakcase3.jpg" alt="Jewelry case 3" loading="lazy">
+        <img src="works/nakcase1.JPG" alt="Jewelry case 1" loading="lazy">
+        <img src="works/nakcase2.JPG" alt="Jewelry case 2" loading="lazy">
+        <img src="works/nakcase3.JPG" alt="Jewelry case 3" loading="lazy">
       </div>
     </article>
 
     <article class="project">
       <h3>Pre-Fabricated Stairs</h3>
       <div class="gallery">
-        <img src="works/POLLENSTAIR1.jpg" alt="Pre-fabricated stairs 1" loading="lazy">
-        <img src="works/POLLENSTAIR2.jpg" alt="Pre-fabricated stairs 2" loading="lazy">
-        <img src="works/POLLENSTAIR3.jpg" alt="Pre-fabricated stairs 3" loading="lazy">
-        <img src="works/POLLENSTAIR4.jpg" alt="Pre-fabricated stairs 4" loading="lazy">
-        <img src="works/POLLENSTAIR5.jpg" alt="Pre-fabricated stairs 5" loading="lazy">
+        <img src="works/POLLENSTAIR1.JPG" alt="Pre-fabricated stairs 1" loading="lazy">
+        <img src="works/POLLENSTAIR2.JPG" alt="Pre-fabricated stairs 2" loading="lazy">
+        <img src="works/POLLENSTAIR3.JPG" alt="Pre-fabricated stairs 3" loading="lazy">
+        <img src="works/POLLENSTAIR4.JPG" alt="Pre-fabricated stairs 4" loading="lazy">
+        <img src="works/POLLENSTAIR5.JPG" alt="Pre-fabricated stairs 5" loading="lazy">
       </div>
     </article>
 
@@ -201,8 +201,8 @@ h1 {
       <h3>Lighting Concepts</h3>
       <div class="gallery">
         <img src="works/STUDIOA1.jpg" alt="Lighting concept 1" loading="lazy">
-        <img src="works/STUDIOA2.jpg" alt="Lighting concept 2" loading="lazy">
-        <img src="works/STUDIOA3.jpg" alt="Lighting concept 3" loading="lazy">
+        <img src="works/STUDIOA2.JPG" alt="Lighting concept 2" loading="lazy">
+        <img src="works/STUDIOA3.JPG" alt="Lighting concept 3" loading="lazy">
       </div>
     </article>
 
@@ -210,7 +210,7 @@ h1 {
       <h3>Serasana</h3>
       <div class="gallery">
         <img src="works/SERASANA1.jpg" alt="Serasana fabrication 1" loading="lazy">
-        <img src="works/SERASANA2.jpg" alt="Serasana fabrication 2" loading="lazy">
+        <img src="works/SERASANA2.JPG" alt="Serasana fabrication 2" loading="lazy">
       </div>
     </article>
   </section>
@@ -241,35 +241,13 @@ h1 {
 <script>
 /* Every portfolio image opens its original full-size file in a new tab. */
 document.querySelectorAll('.gallery img').forEach(function (img) {
-  var originalPath = img.getAttribute('src');
-  var fileName = originalPath.substring(originalPath.lastIndexOf('/') + 1);
-  var upperExtensionName = fileName.replace(/\.jpg$/i, '.JPG');
-  var encodedName = encodeURIComponent(fileName);
-  var encodedUpperName = encodeURIComponent(upperExtensionName);
-  var paths = [
-    '/portfolio/works/' + encodedName + '?v=20260814-3',
-    '/portfolio/works/' + encodedUpperName + '?v=20260814-3',
-    'https://raw.githubusercontent.com/adamtablemaker/portfolio/main/works/' + encodedName,
-    'https://raw.githubusercontent.com/adamtablemaker/portfolio/main/works/' + encodedUpperName
-  ];
-
-  var pathIndex = 0;
-  img.onerror = function () {
-    pathIndex += 1;
-    if (pathIndex < paths.length) {
-      img.src = paths[pathIndex];
-      link.href = paths[pathIndex];
-    }
-  };
-
   var link = document.createElement('a');
-  link.href = paths[0];
+  link.href = img.getAttribute('src');
   link.target = '_blank';
   link.rel = 'noopener';
   link.setAttribute('aria-label', 'Open full-size image');
   img.parentNode.insertBefore(link, img);
   link.appendChild(img);
-  img.src = paths[0];
 });
 </script>
 </body>
