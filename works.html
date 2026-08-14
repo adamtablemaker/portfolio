@@ -1,362 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Selected Works | Adam Owens</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background: #fff;
+  color: #222;
 }
 
-body{
-font-family:'Cormorant Garamond',serif;
-background:#fff;
-color:#222;
+.wrapper {
+  width: min(94vw, 1500px);
+  margin: 72px auto;
 }
 
-.wrapper{
-max-width:1120px;
-margin:90px auto;
-padding:0 42px;
+h1 {
+  font-size: clamp(46px, 5vw, 68px);
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
-h1{
-font-size:56px;
-font-weight:500;
-margin-bottom:10px;
+.intro {
+  max-width: 760px;
+  margin-bottom: 90px;
+  color: #666;
+  font-size: 20px;
 }
 
-.intro{
-font-size:18px;
-color:#666;
-margin-bottom:90px;
-max-width:720px;
+.section { margin-bottom: 145px; }
+
+.section-header {
+  margin: 110px 0 65px;
 }
 
-.section{
-margin-bottom:130px;
+.section-header hr {
+  border: 0;
+  border-top: 1px solid #cfcfcf;
+  margin-bottom: 28px;
 }
 
-.section-header{
-margin:120px 0 70px;
+.section-header h2 {
+  margin-bottom: 12px;
+  font-size: 29px;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
 }
 
-.section-header hr{
-border:none;
-border-top:1px solid #cfcfcf;
-margin-bottom:28px;
+.section-header p,
+.project p {
+  max-width: 790px;
+  color: #666;
+  font-size: 18px;
+  line-height: 1.55;
 }
 
-.section-header h2{
-font-size:28px;
-font-weight:500;
-letter-spacing:.16em;
-text-transform:uppercase;
-margin-bottom:12px;
+.project { margin-bottom: 115px; }
+
+.project h3 {
+  margin-bottom: 18px;
+  font-size: 38px;
+  font-weight: 500;
 }
 
-.section-header p{
-font-size:17px;
-color:#777;
-max-width:700px;
+.project p { margin-bottom: 32px; }
+
+/* Large images, two per row. No fixed heights and absolutely no cropping. */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
 }
 
-.project{
-margin-bottom:90px;
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #f7f7f7;
 }
 
-.project h3{
-font-size:34px;
-font-weight:500;
-margin-bottom:18px;
+/* Give an unpaired final image the full available width. */
+.gallery img:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  width: min(100%, 1080px);
+  justify-self: center;
 }
 
-.project p{
-font-size:17px;
-line-height:1.55;
-color:#666;
-max-width:760px;
-margin-bottom:28px;
+.photo-gallery {
+  gap: 34px;
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
+.footer {
+  margin: 130px 0 45px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  letter-spacing: .22em;
 }
 
-.gallery img{
-width:100%;
-height:270px;
-object-fit:cover;
-display:block;
-transition:.25s;
-cursor:pointer;
+@media (max-width: 760px) {
+  .wrapper { width: 92vw; margin-top: 42px; }
+  .intro { margin-bottom: 65px; }
+  .section-header { margin-top: 80px; }
+  .section-header h2 { font-size: 23px; letter-spacing: .09em; }
+  .gallery { grid-template-columns: 1fr; gap: 22px; }
+  .gallery img:last-child:nth-child(odd) { grid-column: auto; width: 100%; }
 }
-
-.gallery img:hover{
-transform:scale(1.02);
-}
-
-
-
-.footer{
-margin:120px 0 50px;
-text-align:center;
-font-size:14px;
-letter-spacing:.22em;
-color:#777;
-}
-
-
-.photo-gallery{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:14px;
-}
-.photo-gallery img{
-height:240px;
-object-fit:cover;
-}
-@media(max-width:900px){
-.photo-gallery{grid-template-columns:repeat(2,1fr);}
-}
-
 </style>
-
 </head>
 
 <body>
-
-<div class="wrapper">
-
-<h1>Selected Works</h1>
-
-<div class="intro">
-Selected architectural fabrication, engineering, installation, and photographic work.
-</div>
-
-<div class="section">
-
-<div class="section-header">
-
-<h2>TURNKEY DESIGN · FABRICATION · INSTALLATION</h2>
-
-<p>
-Projects conceived, engineered, fabricated, and installed from concept through completion.
-</p>
-
-</div>
-
-
-
-<div class="project">
-
-<h3>Public Art</h3>
-
-<p>
-<b>Tempo</b> — 2018 Austin Art in Public Places (AIPP). Permanent public artwork designed,
-engineered, fabricated, and installed for the City of Austin. The project integrated
-structural steel fabrication, lighting, digital fabrication, and site installation.
-</p>
-
-<div class="gallery">
-
-<img src="works/SHUDDER1.jpg">
-<img src="works/SHUDDER2.jpg">
-<img src="works/SHUDDER3.jpg">
-<img src="works/SHUDDER4.jpg">
-<img src="works/SHUDDER5.jpg">
-<img src="works/SHUDDER6.jpg">
-
-</div>
-
-</div>
-
-<div class="project">
-
-<h3>Conference Table</h3>
-
-<p>
-Custom steel and hardwood conference table designed, engineered,
-fabricated, and installed for commercial use.
-</p>
-
-<div class="gallery">
-
-<img src="works/stem1.jpg">
-<img src="works/stem2.jpg">
-<img src="works/stem3.jpg">
-<img src="works/stem4.jpg">
-<img src="works/stem5.jpg">
-<img src="works/stem6.jpg">
-<img src="works/stem7.jpg">
-
-</div>
-
-</div>
-
-<div class="project">
-
-<h3>Outdoor Tables</h3>
-
-<p>
-Exterior steel and thermally modified wood tables designed for
-long-term public use and fabricated for commercial environments.
-</p>
-
-<div class="gallery">
-
-<img src="works/DIVETABLE1 (3).jpg">
-<img src="works/DIVETABLE1 (5).jpg">
-<img src="works/DIVETABLE1 (2).jpg">
-<img src="works/DIVETABLE1 (4).jpg">
-<img src="works/DIVETABLE1 (1).jpg">
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="section">
-
-<div class="section-header">
-
-<hr>
-
-<h2>FABRICATION · INSTALLATION</h2>
-
-<p>
-Projects fabricated and installed from architect and client-developed designs.
-</p>
-
-</div>
-
-
-
-<div class="project">
-
-<h3>Jewelry Case</h3>
-
-<div class="gallery">
-
-<img src="works/nakcase1.jpg">
-<img src="works/nakcase2.jpg">
-<img src="works/nakcase3.jpg">
-
-</div>
-
-</div>
-
-
-
-<div class="project">
-
-<h3>Pre-Fabricated Stairs</h3>
-
-<div class="gallery">
-
-<img src="works/POLLENSTAIR1.jpg">
-<img src="works/POLLENSTAIR2.jpg">
-<img src="works/POLLENSTAIR3.jpg">
-<img src="works/POLLENSTAIR4.jpg">
-<img src="works/POLLENSTAIR5.jpg">
-
-</div>
-
-</div>
-
-
-
-<div class="project">
-
-<h3>Lighting Concepts</h3>
-
-<div class="gallery">
-
-<img src="works/STUDIOA1.jpg">
-<img src="works/STUDIOA2.jpg">
-<img src="works/STUDIOA3.jpg">
-
-</div>
-
-</div>
-
-
-
-<div class="project">
-
-<h3>Serasana</h3>
-
-<div class="gallery">
-
-<img src="works/SERASANA1.jpg">
-<img src="works/SERASANA2.jpg">
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="section">
-
-<div class="section-header">
-
-<hr>
-
-<h2>PHOTOGRAPHY</h2>
-
-<p>
-Selected photographs from South Texas, Seminole Canyon, the Lower Pecos,
-and the U.S.–Mexico border. Observations of landscape, structure,
-infrastructure, and time.
-</p>
-
-</div>
-
-
-
-<div class="gallery photo-gallery">
-
-<img src="works/GOVENORS_LANDING.JPG">
-<img src="works/HWY90_AMISTAD.JPG">
-<img src="works/LANGTRY_3.JPG">
-<img src="works/LOWERPECOS_CANYONEBADLANDS.jpg">
-<img src="works/MEXICO_CLIFF.JPG">
-<img src="works/MOON_Y.JPG">
-<img src="works/OCOTILLO_SUNRISE.JPG">
-<img src="works/OLD_RV.JPG">
-<img src="works/REDHOUSE.JPG">
-<img src="works/RIOGRANDE_VALLEY.jpg">
-
-</div>
-
-</div>
-
-
-
-<div class="footer">
-
-GEOMETRY · DESIGN · FABRICATION · INSTALLATION
-
-</div>
-
-</div>
-
+<main class="wrapper">
+  <h1>Selected Works</h1>
+  <p class="intro">Selected architectural fabrication, engineering, installation, and photographic work.</p>
+
+  <section class="section">
+    <header class="section-header">
+      <h2>Turnkey Design · Fabrication · Installation</h2>
+      <p>Projects conceived, engineered, fabricated, and installed from concept through completion.</p>
+    </header>
+
+    <article class="project">
+      <h3>Public Art</h3>
+      <p><strong>Tempo</strong> — 2018 Austin Art in Public Places (AIPP). Permanent public artwork designed, engineered, fabricated, and installed for the City of Austin. The project integrated structural steel fabrication, lighting, digital fabrication, and site installation.</p>
+      <div class="gallery">
+        <img src="works/SHUDDER1.jpg" alt="Tempo public artwork 1" loading="lazy">
+        <img src="works/SHUDDER2.jpg" alt="Tempo public artwork 2" loading="lazy">
+        <img src="works/SHUDDER3.jpg" alt="Tempo public artwork 3" loading="lazy">
+        <img src="works/SHUDDER4.jpg" alt="Tempo public artwork 4" loading="lazy">
+        <img src="works/SHUDDER5.jpg" alt="Tempo public artwork 5" loading="lazy">
+        <img src="works/SHUDDER6.jpg" alt="Tempo public artwork 6" loading="lazy">
+        <img src="works/SHUDDER7.jpg" alt="Tempo public artwork 7" loading="lazy">
+      </div>
+    </article>
+
+    <article class="project">
+      <h3>Conference Table</h3>
+      <p>Custom steel and hardwood conference table designed, engineered, fabricated, and installed for commercial use.</p>
+      <div class="gallery">
+        <img src="works/stem1.jpg" alt="Conference table 1" loading="lazy">
+        <img src="works/stem2.jpg" alt="Conference table 2" loading="lazy">
+        <img src="works/stem3.jpg" alt="Conference table 3" loading="lazy">
+        <img src="works/stem4.jpg" alt="Conference table 4" loading="lazy">
+        <img src="works/stem5.jpg" alt="Conference table 5" loading="lazy">
+        <img src="works/stem6.jpg" alt="Conference table 6" loading="lazy">
+        <img src="works/stem7.jpg" alt="Conference table 7" loading="lazy">
+      </div>
+    </article>
+
+    <article class="project">
+      <h3>Outdoor Tables</h3>
+      <p>Exterior steel and thermally modified wood tables designed for long-term public use and fabricated for commercial environments.</p>
+      <div class="gallery">
+        <img src="works/DIVETABLE1 (1).jpg" alt="Outdoor table 1" loading="lazy">
+        <img src="works/DIVETABLE1 (2).jpg" alt="Outdoor table 2" loading="lazy">
+        <img src="works/DIVETABLE1 (3).jpg" alt="Outdoor table 3" loading="lazy">
+        <img src="works/DIVETABLE1 (4).jpg" alt="Outdoor table 4" loading="lazy">
+        <img src="works/DIVETABLE1 (5).jpg" alt="Outdoor table 5" loading="lazy">
+      </div>
+    </article>
+  </section>
+
+  <section class="section">
+    <header class="section-header">
+      <hr>
+      <h2>Fabrication · Installation</h2>
+      <p>Projects fabricated and installed from architect and client-developed designs.</p>
+    </header>
+
+    <article class="project">
+      <h3>Jewelry Case</h3>
+      <div class="gallery">
+        <img src="works/nakcase1.jpg" alt="Jewelry case 1" loading="lazy">
+        <img src="works/nakcase2.jpg" alt="Jewelry case 2" loading="lazy">
+        <img src="works/nakcase3.jpg" alt="Jewelry case 3" loading="lazy">
+      </div>
+    </article>
+
+    <article class="project">
+      <h3>Pre-Fabricated Stairs</h3>
+      <div class="gallery">
+        <img src="works/POLLENSTAIR1.jpg" alt="Pre-fabricated stairs 1" loading="lazy">
+        <img src="works/POLLENSTAIR2.jpg" alt="Pre-fabricated stairs 2" loading="lazy">
+        <img src="works/POLLENSTAIR3.jpg" alt="Pre-fabricated stairs 3" loading="lazy">
+        <img src="works/POLLENSTAIR4.jpg" alt="Pre-fabricated stairs 4" loading="lazy">
+        <img src="works/POLLENSTAIR5.jpg" alt="Pre-fabricated stairs 5" loading="lazy">
+      </div>
+    </article>
+
+    <article class="project">
+      <h3>Lighting Concepts</h3>
+      <div class="gallery">
+        <img src="works/STUDIOA1.jpg" alt="Lighting concept 1" loading="lazy">
+        <img src="works/STUDIOA2.jpg" alt="Lighting concept 2" loading="lazy">
+        <img src="works/STUDIOA3.jpg" alt="Lighting concept 3" loading="lazy">
+      </div>
+    </article>
+
+    <article class="project">
+      <h3>Serasana</h3>
+      <div class="gallery">
+        <img src="works/SERASANA1.jpg" alt="Serasana fabrication 1" loading="lazy">
+        <img src="works/SERASANA2.jpg" alt="Serasana fabrication 2" loading="lazy">
+      </div>
+    </article>
+  </section>
+
+  <section class="section">
+    <header class="section-header">
+      <hr>
+      <h2>Photography</h2>
+      <p>Selected photographs from South Texas, Seminole Canyon, the Lower Pecos, and the U.S.–Mexico border. Observations of landscape, structure, infrastructure, and time.</p>
+    </header>
+
+    <div class="gallery photo-gallery">
+      <img src="works/GOVENORS_LANDING.JPG" alt="Governors Landing" loading="lazy">
+      <img src="works/HWY90_AMISTAD.JPG" alt="Highway 90 at Amistad" loading="lazy">
+      <img src="works/LANGTRY_3.JPG" alt="Langtry" loading="lazy">
+      <img src="works/LOWERPECOS_CANYONEBADLANDS.jpg" alt="Lower Pecos canyon badlands" loading="lazy">
+      <img src="works/MEXICO_CLIFF.JPG" alt="Mexico cliff" loading="lazy">
+      <img src="works/MOON_Y.JPG" alt="Moon" loading="lazy">
+      <img src="works/OCOTILLO_SUNRISE.JPG" alt="Ocotillo sunrise" loading="lazy">
+      <img src="works/OLD_RV.JPG" alt="Old recreational vehicle" loading="lazy">
+      <img src="works/REDHOUSE.JPG" alt="Red house" loading="lazy">
+      <img src="works/RIOGRANDE_VALLEY.jpg" alt="Rio Grande Valley" loading="lazy">
+    </div>
+  </section>
+
+  <footer class="footer">GEOMETRY · DESIGN · FABRICATION · INSTALLATION</footer>
+</main>
 </body>
 </html>
