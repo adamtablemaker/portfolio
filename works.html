@@ -241,8 +241,12 @@ h1 {
 <script>
 /* Every portfolio image opens its original full-size file in a new tab. */
 document.querySelectorAll('.gallery img').forEach(function (img) {
+  var originalPath = img.getAttribute('src');
+  var fileName = originalPath.substring(originalPath.lastIndexOf('/') + 1);
+  var fixedPath = '/portfolio/works/' + encodeURIComponent(fileName) + '?v=20260814-2';
+  img.src = fixedPath;
   var link = document.createElement('a');
-  link.href = img.getAttribute('src');
+  link.href = fixedPath;
   link.target = '_blank';
   link.rel = 'noopener';
   link.setAttribute('aria-label', 'Open full-size image');
