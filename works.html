@@ -90,7 +90,7 @@ margin-bottom:28px;
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
 gap:18px;
 }
 
@@ -122,6 +122,20 @@ text-align:center;
 font-size:14px;
 letter-spacing:.22em;
 color:#777;
+}
+
+
+.photo-gallery{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:14px;
+}
+.photo-gallery img{
+height:130px;
+object-fit:cover;
+}
+@media(max-width:900px){
+.photo-gallery{grid-template-columns:repeat(2,1fr);}
 }
 
 </style>
@@ -177,8 +191,6 @@ structural steel fabrication, lighting, digital fabrication, and site installati
 
 </div>
 
-
-
 <div class="project">
 
 <h3>Conference Table</h3>
@@ -201,8 +213,6 @@ fabricated, and installed for commercial use.
 </div>
 
 </div>
-
-
 
 <div class="project">
 
@@ -330,7 +340,7 @@ infrastructure, and time.
 
 
 
-<div class="gallery">
+<div class="gallery photo-gallery">
 
 <img src="works/GOVERNORS_LANDING.JPG">
 <img src="works/HWY90_AMISTAD.JPG">
